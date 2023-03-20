@@ -1,0 +1,765 @@
+/* Google Fonts Poppins--------------- */
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,700&display=swap");
+/* CSS Variable ------------------ */
+/* color For Dark Theme----------- */
+$body-color:  #fff; /* rgb(45, 47, 57) */
+$sub-body-color:#fff;/*#060b25 */
+$font-color: black;/* rgb(241, 233, 233)*/
+$font-color2:white;
+$font-family: "Poppins", sans-serif;
+$hue-color: 243; /* 150 , 243 , 43 */
+$first-color: hsla($hue-color, 76%, 52%, 1);
+$second-color: hsla($hue-color, 49%, 55%, 1);
+$third-color: hsla($hue-color, 31%, 59%, 1);
+$h1: 5rem;
+$h2: 4rem;
+$h3: 3rem;
+$h4: 2rem;
+$h5: 1rem;
+$h6: .5rem;
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: $font-family;
+}
+
+body {
+  background-color:$body-color!important;
+  position: relative;
+  scroll-behavior: smooth;
+  height: 100%;
+  width: 100%;
+
+}
+/* Header Section Css ----------------  */
+header {
+  width: 100%;
+  height: 5rem;
+}
+#navbar {
+  position: fixed;
+  top: 0;
+  padding-bottom: .6rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-around;
+  width: 100%;
+  height: 5rem;
+  transition: .5s;
+  align-items: center;
+  
+}
+#logo {
+  color: $first-color;
+  font-size: $h4;
+  font-weight: 600;
+}
+.menu-toggle {
+  position: relative;
+  display: flex;
+  background-color:$body-color!important;
+  align-items: center;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+  height: 2.5rem;
+  width: max-content;
+  margin-top: 1em;
+  border-radius: 2rem;
+
+ .nav-link-menu {
+  font-size: $h5;
+  width: calc(100%/5);
+  text-align: center;
+  color: $first-color;
+
+  
+}
+
+}
+
+
+#btn-me {
+  display: inline;
+  padding: 1rem!important;
+  font-weight: 500;
+  font-size: $h5;
+  background:$first-color;
+  color: $font-color;
+  margin-top: 1rem!important;
+  padding: 0.5rem 1.5rem!important;
+  box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+}
+#btn-me:hover{
+  background-color:$second-color!important;
+}
+#btn-me > a {
+  text-decoration:none;
+  color:$font-color2!important;
+}
+/* Tab Bar CSS  ---------------- */
+#slider {
+  position: absolute;
+  left: 0rem;
+  overflow: hidden;
+  border-radius: 2rem;
+  height: 100%;
+  width: 7rem;
+  background: $first-color;
+  transition: all 0.3s ease-in-out;
+}
+
+/* Sub header decoration  -------------- */
+.sub_header {
+  z-index: -1;
+  position: relative;
+  display: flex;
+  width: 100%;
+  margin-top: 5rem;
+  padding: 0 2rem;
+  height: 17rem;
+  float: left;
+}
+#main_heading {
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 100%;
+  width: 50%;
+  margin: 0 2.1rem;
+
+/* Type Effect Css ----------  */
+h1{
+  display: flex;
+  color: $font-color;
+  z-index: 2;
+  position: relative;
+  font-family: $font-family;
+  font-size: $h2;
+  font-weight: 700;
+}
+.sub-heading {
+  color: $first-color;
+  font-size: $h4;
+  font-weight: 600;
+}
+#discribe {
+  color: $font-color;
+  font-family: $font-family;
+  font-size: $h5;
+  font-weight: 600;
+}
+
+
+.cursor {
+  display: inline-block;
+  height: 3rem;
+  background-color: rgb(0, 0, 0);
+  margin-left: 0.1rem;
+  width: 3px;
+  margin-bottom: 1rem;
+  animation: blink 1s infinite;
+}
+.typed-text {
+  margin-left: 1rem;
+  color: $first-color;
+}
+
+.cursor.typing {
+  animation: none;
+}
+@keyframes blink {
+  0% {
+    background-color: rgb(0, 0, 0);
+  }
+
+  49% {
+    background-color: #ccc;
+  }
+
+  50% {
+    background-color: transparent;
+  }
+
+  99% {
+    background-color: transparent;
+  }
+
+  100% {
+    background-color: rgb(0, 0, 0);
+  }
+}
+.container p span.cursor.typing {
+  animation: none;
+}
+}
+.nav-link-menu>.uil {
+  display: none;
+}
+
+.myImg {
+  background: linear-gradient(transparent, $first-color);
+  display: block;
+  margin-right: 3rem;
+  float: left;
+  width: calc(100% / 6);
+  border-radius: 6rem 6rem 0 0;
+  margin-top: 1rem;
+  margin-left: 3rem;
+}
+/* // About section Css -------------------*/
+#about-section {
+  position:relative;
+  z-index: -1;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+  clear: both;
+  display: block;
+  padding: 1rem;
+}
+#about-section-container {
+  background-color: $sub-body-color!important;
+  text-align: center;
+  border-radius: 2rem!important;
+}
+#title {
+  color: $font-color;
+  text-transform: uppercase;
+  font-size: calc(var(--h3) + .7rem);
+  padding: 1rem 0rem 1rem 0;
+  font-family: $font-family;
+  font-weight: 700;
+}
+.d-flex {
+  padding-bottom: 2rem;
+  display: flex !important;
+}
+#about-img {
+  background-color: hsla(var(--hue-color), 31%, 59%, .5);
+  box-shadow: 1px 1px 4px 2px rgb(0 0 0 / 25%);
+  border-radius: 2rem;
+}
+#about-section-describe {
+  color: $font-color;
+  text-align: start;
+  margin-left: 2rem;
+  margin-top: 1.5rem;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.sub-title {
+  font-family: $font-family;
+  font-size: var(--h2);
+  font-weight: 500;
+  color: $first-color;
+}
+.sub-title-para {
+  display: block;
+  color: $font-color;
+  font-family: 'Poppins';
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1.2rem;
+}
+.hireme {
+  padding: 0.5rem 1.5rem;
+  margin-top: 2rem;
+  background: $first-color;
+  color: $font-color2!important;
+  text-decoration: none;
+  font-size: var(--h2);
+  border-radius: 2rem;
+  box-shadow: 2px 1px 5px 2px rgb(0 0 0 / 25%);
+}
+.hireme:hover {
+  background: $second-color!important;
+}
+/* Social Css in About------- */
+#social {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+}
+.social {
+  color: $first-color;
+  margin: 1rem 0 0 1rem;
+  font-size: var(--h1);
+}
+#social > a:hover {
+  color: $second-color;
+}
+
+/* Capability section css -------------- */
+.nav-tabs .nav-item.show .nav-link,
+.nav-tabs .nav-link.active {
+  position: relative;
+  z-index: -1;
+  background-color: $first-color !important;
+  border: none!important;
+  color: $font-color2 !important;
+ 
+  z-index: -1 !important;
+}
+#nav-profile-tab {
+  color: $first-color;
+}
+#nav-home-tab {
+  color: $first-color;
+}
+.nav-link,
+.nav-link.active {
+  border-radius: 2rem !important;
+  color: $body-color;
+}
+.nav-link,
+.nav-link.active:hover {
+  border: none !important;
+}
+.nav-tabs {
+  width: fit-content;
+  border: none!important;
+  z-index: -1 !important;
+}
+
+/* Progress Bar Css ----------------*/
+.progress {
+  position: relative;
+  z-index: -1;
+  display: flex;
+  background-color: $sub-body-color !important;
+  margin: 1rem;
+  border-radius: 2rem !important;
+  flex-direction: column;
+  height: fit-content !important;
+}
+.progress-bar {
+  background-color: $first-color !important;
+  margin: 1rem .5rem;
+}
+#progress-bar-label {
+  font-size: var(--h3);
+  color: $font-color;
+  text-transform: uppercase;
+  margin: .5rem .5rem 0 1rem;
+  font-weight: 600;
+}
+
+/* Timeline Css --------------- */
+.pt-100 {
+  padding-top: 1rem;
+}
+
+.pb-100 {
+  padding-bottom: 1rem;
+}
+
+.section-title {
+  color: $font-color;
+  margin-bottom: .5rem;
+}
+
+.section-title p {
+  color: $third-color;
+  font-size: var(--h3);
+}
+
+.section-title h4 {
+  text-transform: upperc-1remase;
+  font-size: 2rem;
+  font-family: $font-family;
+  position: relative;
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  font-weight: 600;
+}
+
+.section-title h4:before {
+  position: absolute;
+  content: "";
+  width: 4rem;
+  height: 2px;
+  background-color: $first-color;
+  bottom: 0;
+  left: 50%;
+  margin-left: -2rem;
+}
+
+.section-title h4:after {
+  position: absolute;
+  background-color: $first-color;
+  content: "";
+  width: .7rem;
+  height: .7rem;
+  bottom: -4px;
+  left: 50%;
+  margin-left: -5px;
+  border-radius: 50%;
+}
+
+ul.timeline-list {
+  position: relative;
+  margin: 0;
+  padding: 0
+}
+
+ul.timeline-list:before {
+  position: absolute;
+  content: "";
+  width: 2px;
+  height: 100%;
+  background-color: $third-color;
+  left: 50%;
+  top: 0;
+  -webkit-transform: translateX(-50%);
+  transform: translateX(-50%);
+}
+
+ul.timeline-list li {
+  width: 100%;
+  position: relative;
+  clear: both;
+  display: table;
+}
+
+.timeline_content {
+  border: 2px solid $first-color;
+  background-color: $body-color;
+  border-radius: 2rem;
+
+}
+
+ul.timeline-list li .timeline_content {
+  width: 45%;
+  text-transform: uppercase;
+  font-family: $font-family;
+  color: $first-color;
+  padding: 30px;
+  float: left;
+  text-align: right;
+}
+
+ul.timeline-list li:nth-child(2n) .timeline_content {
+  float: right;
+  text-align: left;
+}
+
+.timeline_content h4 {
+  font-size: 1.3rem;
+  font-weight: 600;
+  margin: 10px 0;
+}
+
+ul.timeline-list li:before {
+  position: absolute;
+  content: "";
+  width: 25px;
+  height: 25px;
+  background-color: $first-color;
+  left: 50%;
+  top: 50%;
+  -webkit-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+  border-radius: 50%;
+}
+
+.timeline_content span {
+  font-size: 1rem;
+  font-weight: 500;
+  font-family: poppins;
+  color: $font-color!important;
+}
+
+.timeline_content p {
+  color: $font-color!important;
+  text-transform: capitalize !important;
+}
+
+.mt-4 {
+  z-index: -1;
+
+}
+
+/* Card Slider Css with Swiper */
+
+.swiper {
+  width: 100%;
+  height: fit-content;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background-color: $body-color;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.card{
+  background-color: $sub-body-color!important;
+  width: 34rem!important;
+  border-radius: 2rem!important;
+  border: none!important;
+}
+/* Card Button CSS -------------- */
+.btn{
+  background-color: $first-color!important;
+  color: $font-color2!important;
+}
+.btn:hover{
+  background-color: $second-color;
+  border: $first-color!important;
+  box-shadow:0 .5rem 1rem rgba(0,0,0,.15)!important;
+}
+.card-title{
+  color: $first-color!important;
+  font-weight: 500;
+  font-family: $font-family;
+  font-size: 1.5rem;
+}
+.card-text{
+  color: $font-color;
+}
+/* forms css ---------- ------- */
+#forms-section{
+  position: relative;
+z-index: -1;
+  background-color: $sub-body-color;
+border-radius: 2rem;
+padding: 1.5rem;
+}
+
+label{
+  color: $font-color;
+  font-family: $font-family;
+  font-weight: 600;
+  padding-left: 1rem;
+  font-size: 1.2rem!important;
+}
+.form-control{
+  background-color: $body-color!important;
+  height: calc(2.5em + .75rem + 2px)!important;
+  border: 2px solid $first-color!important;
+  padding-left: 2rem!important;
+  color: $first-color!important;
+  font-family: $font-family!important;
+}
+
+.form-control::placeholder{ 
+  color: $third-color!important;
+}
+.form-control:hover{
+border: 2px solid $second-color!important;
+}
+.submit{
+margin-top:1.5rem;
+}
+.py-3{
+   height:11rem;
+
+}
+footer{
+  background-color: $sub-body-color;
+}
+
+/* Screen  Meadia Quary CSS-------------- */
+@media only screen and (max-width: 768px) {
+  #header{
+    position: absolute;
+  }
+#navbar{
+  position:fixed;
+  bottom: 0;
+  background-color: $sub-body-color!important;
+}
+  .menu-toggle {
+
+    position: absolute;
+    bottom: 0;
+    display: none;
+    justify-content: space-around;
+    flex-direction: row;
+    background: $sub-body-color;
+    align-items: center;
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    height: 3rem;
+    width: 100%;
+    border-radius: 2rem 2rem 0px 0px;
+  }
+#logo {
+    font-size: var(--h2);
+  }
+
+  #navbar {
+    width: 100vw;
+    height: 4rem;
+    align-items: center;
+    box-shadow: 0 2px 4px 0 rgba(0, 0, 0, 0.2);
+    border-radius: 0 0 2rem 2rem;
+  }
+
+#btn-me {
+    margin-bottom: 0.4rem!important;
+  }
+
+  #logo:hover {
+    color: $third-color;
+  }
+
+  #btn-me:hover {
+    background: $third-color!important;
+  }
+
+  .nav-link-menu {
+    position: relative;
+    text-align: center;
+    width: calc(100% / 4);
+  }
+
+  .nav-link-menu>a {
+    display: none;
+  }
+
+  .nav-link-menu>.uil {
+    display: block;
+    font-size: var(--h2);
+  }
+
+  #slider {
+    box-shadow: 2px 2px 4px 2px rgba(0, 0, 0, 0.2);
+    display: block;
+    position: absolute;
+    left: 0%;
+    border-radius: 2rem 2rem 0px 0px;
+    padding: 2.2rem;
+    height: 4rem;
+    width: calc(100% / 4);
+    background: $first-color;
+    transition: all 0.3s ease-in-out;
+  }
+
+  /*section  heading ---------------- */
+  .myImg {
+    height: 12rem;
+    width: 11rem;
+    margin-bottom: 1.5rem;
+  }
+
+  .sub_header {
+
+    display: flex;
+    margin-top: 7rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row;
+    height: max-content;
+    flex-wrap: wrap-reverse;
+  }
+
+  #main_heading {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    height: 100%;
+    width: 100%;
+    margin: 0;
+  }
+
+  .h1 {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    position: relative;
+    font-family: $font-family;
+    font-size: var(--h1);
+    font-weight: 600;
+  }
+
+  #discribe {
+    text-align: center;
+    font-family: $font-family;
+    font-size: var(--h3);
+    padding: 1rem 2rem;
+    font-weight: 500;
+  }
+
+  .cursor {
+    display: inline-block;
+    height: 3rem;
+    background-color: rgb(0, 0, 0);
+    margin-left: 0.1rem;
+    width: 3px;
+    animation: blink 1s infinite;
+  }
+
+  .d-flex {
+    flex-wrap: wrap;
+  }
+
+  .sub-heading {
+    text-align: center;
+  }
+
+  #about-section-describe {
+    text-align: center;
+    align-items: center;
+    margin-left: 0;
+  }
+
+  #social {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+  }
+
+  .timeline_content {
+    overflow-y: hidden;
+  }
+
+  ul.timeline-list li .timeline_content {
+
+    height: 12rem;
+    text-align: center;
+    padding: .7rem;
+  }
+
+  ul.timeline-list li:nth-child(2n) .timeline_content {
+    float: right;
+    text-align: center !important;
+  }
+
+  .timeline_content span {
+    font-size: .8rem;
+  }
+
+  .timeline_content h4 {
+    font-size: 1rem;
+    font-weight: 600;
+    margin: 10px 0;
+  }
+
+  .timeline_content p {
+    color:$font-color2;
+    font-size: .8rem;
+  }
+}
