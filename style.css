@@ -8,14 +8,18 @@
 html,
 body {
   width: 100%;
-  height: 100%;
+  height: -moz-max-content;
+  height: max-content;
   background-color: white;
 }
 
 header {
   display: block;
+  position: fixed;
+  z-index: 1000;
   width: 100%;
   height: 5rem;
+  background: white;
 }
 header #navbar {
   display: flex;
@@ -42,9 +46,9 @@ header #navbar #menu-bar {
   justify-content: center;
   position: relative;
   width: 60%;
-  background: white;
   border-radius: 2rem;
-  height: 3.5rem;
+  height: 2.7rem;
+  background-color: white;
 }
 header #navbar #menu-bar .menu-links {
   width: 25%;
@@ -52,14 +56,97 @@ header #navbar #menu-bar .menu-links {
   font-size: 1rem;
   font-weight: 600;
   color: hsl(247, 93%, 59%);
+  z-index: 2;
+}
+header #navbar #menu-bar .menu-links .nav-link {
+  height: 100%;
 }
 header #navbar #menu-bar .menu-links i {
   display: none;
 }
 header #navbar #menu-bar #slider {
   position: absolute;
-  width: 2rem;
-  height: 2rem;
+  left: 0;
+  height: 100%;
   background-color: hsl(247, 93%, 59%);
   border-radius: 2rem;
+  z-index: 1;
+  transition: 0.6s all;
+}
+header #navbar .menu-showers {
+  display: none;
+}
+header #navbar #reg-btn {
+  display: flex;
+  align-items: center;
+  justify-content: end;
+  width: 20%;
+}
+header #navbar #reg-btn #login-btn {
+  text-align: start !important;
+  text-decoration: none;
+  font-size: 1rem;
+  color: hsl(247, 93%, 59%);
+  font-weight: 600;
+}
+header #navbar #reg-btn #signup-btn {
+  background-color: hsl(247, 93%, 59%) !important;
+  color: white !important;
+  font-weight: 600;
+  font-size: 1rem;
+}
+header #navbar #reg-btn #signup-btn:focus {
+  outline: hsl(247, 93%, 59%);
+  box-shadow: 0px 8px 15px hsla(247, 93%, 59%, 0.2) !important;
+}
+
+.active {
+  color: white !important;
+}
+
+@media only screen and (max-width: 992px) {
+  header #logo {
+    font-size: 1.5rem !important;
+  }
+  header #menu-bar {
+    height: 2rem !important;
+  }
+  header #menu-bar .menu-links {
+    font-size: 0.8rem !important;
+  }
+}
+@media only screen and (max-width: 768px) {
+  body {
+    position: relative;
+  }
+  header {
+    position: fixed;
+    bottom: 0;
+  }
+  header #logo {
+    font-size: 1.2rem !important;
+  }
+  header #menu-bar {
+    position: absolute !important;
+    width: 100% !important;
+    height: 70% !important;
+    display: grid !important;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+  }
+  header #menu-bar .menu-links {
+    text-align: center;
+    width: 100%;
+    height: 100%;
+  }
+  header #menu-bar .menu-links a {
+    display: none;
+  }
+  header #menu-bar .menu-links i {
+    display: block !important;
+    color: black;
+  }
+  header #menu-bar #slider {
+    display: none;
+  }
 }/*# sourceMappingURL=style.css.map */
