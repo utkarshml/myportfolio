@@ -20,105 +20,65 @@
   <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
   <link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
 </head>
-<style>
-  html,
-  body {
-    position: relative;
-    height: 100%;
-  }
 
-
-  /* Js Swiper In Html CSS ---------------------- */
-  .swiper {
-    z-index: -1;
-    width: 100%;
-    height: fit-content;
-  }
-
-  .swiper-slide {
-    text-align: center;
-    font-size: 18px;
-    /* Center slide text vertically */
-    display: -webkit-box;
-    display: -ms-flexbox;
-    display: -webkit-flex;
-    display: flex;
-    -webkit-box-pack: center;
-    -ms-flex-pack: center;
-    -webkit-justify-content: center;
-    justify-content: center;
-    -webkit-box-align: center;
-    -ms-flex-align: center;
-    -webkit-align-items: center;
-    align-items: center;
-  }
-
-  .swiper-wrapper {
-    height: fit-content !important;
-    margin-top: 3rem;
-    margin-bottom: 4rem;
-  }
-
-  .swiper-slide img {
-    display: block;
-    width: 100%;
-    object-fit: cover;
-  }
-  .swiper-pagination > span{
-    background-color: var(--first-color);
-  }
-</style>
-<!-- Website Body Html ------------------------>
-
+<!-- -----------------Html Body-------------->
 <body>
   <!-- Header section  ------------------>
   <header id="home-section">
     <div id="navbar">
-      <div id="logo">
-        <span>Utkarsh</span>
-      </div>
-      <div id="menu-toggle" class="menu-toggle">
-        <div class="nav-link-menu">
+      <a href="#" id="logo">
+        Utkarsh<span>.</span>
+      </a>
+      <div id="menu-bar" class="shadow-sm">
+      <div class="menu-links">
           <a id="home" href="#home-section" class="nav-link">Home</a>
           <i id="home-icon" class="uil uil-estate "></i>
         </div>
 
-        <div class="nav-link-menu">
+        <div class="menu-links">
           <a id="about" href="#about-section" class="nav-link">About</a><i id="about-icon"
             class="uil uil-user"></i>
         </div>
-        <div class="nav-link-menu">
+        <div class="menu-links">
           <a id="capability" href="#capability-section" class="nav-link active">Capability</a><i id="capability-icon"
             class="uil uil-book-open"></i>
         </div>
-        <div class="nav-link-menu">
+        <div class="menu-links">
           <a id="project" href="#project-section" class="nav-link">Projects</a><i id="project-icon"
             class="uil uil-bag-alt"><a href="#" style="text-decoration: none;">&nbsp;</a></i>
         </div>
         <div id="slider"></div>
       </div>
-      <div id="btn-me" class="btn rounded-pill "><a href="#forms-section">Contact</a> </div>
-    </div>
+      <div class="menu-showers">
+      <!-- there are icon which to help   -->
+      <i class="uil uil-multiply"></i>
+      <i class="uil uil-apps"></i>
+      </div>
+      <div id="reg-btn">
+        <a href="#">Login</a></div>
+        <a href="#" class="btn">Signup</a> </div>
+    </div>  
+  </header>
     <!-- Header Heading Sub-Section ---------------->
-    <div class="sub_header">
-      <div id="main_heading">
+    <section class="header-banner row">
+      <div id="banner-title col-1">
         <h1>Hi , I'm<span class="typed-text"></span><span class="cursor">&nbsp;</span>
-        </h1><span class="sub-heading">Full Stack Devoloper</span>
-        <p id="discribe">
+        </h1><span class="banner-title-sub-heading">Full Stack Devoloper</span>
+        <p id="banner-title-sub-heading-description">
           Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur,
           eligendi delectus.
         </p>
       </div>
-      <div class="myImg">&nbsp;</div>
-    </div>
-  </header>
+      <div class="banner-imgage col-1">&nbsp;</div>
+    </section>
   <!--About section ------------------------>
-  <section id="about-section" class="container">
+  <section class="container">
     <div data-aos="flip-left"  id="about-section-container" class="shadow-lg">
       <h1 id="title">About</h1>
       <div class="container gx-5 d-flex">
         <div> <img id="about-img" src="Img/myimg2.png" class="img-fluid" alt="aboutImage"></div>
         <div id="about-section-describe">
+          <span>Who I am </span>
           <h2 class="sub-title">Utkarsh Jaiswal<h2>
               <span class="sub-title-para">Lorem ipsum dolor sit amet consectetur adipisicing elit. Beatae est, debitis
                 at optio incidunt ab vel
@@ -130,7 +90,6 @@
                 <a href="#" class="social"><i class="uil uil-facebook"></i></a>
               </div>
         </div>
-
       </div>
     </div>
   </section>
