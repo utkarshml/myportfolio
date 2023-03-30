@@ -1,9 +1,16 @@
 // Js Variables ---------------------
-const navlinks = document.querySelectorAll('.menu-links')
-const mediaQuery = window.matchMedia('(max-width: 768px)');
-console.log(navlinks)
-const slider = document.getElementById('slider')
-
+const navlinks = document.querySelectorAll(".menu-links");
+const mediaQuery = window.matchMedia("(max-width: 768px)");
+console.log(navlinks);
+const slider = document.getElementById("slider");
+  //  using active link 
+navlinks[0].classList.add("active");
+    function acitveLink() {
+      navlinks.forEach((item) => {
+        item.classList.remove("active");
+        this.classList.add("active");
+      });
+    }
 // Add an event listener to check when the media query changes
 mediaQuery.addListener(handleMediaChange);
 
@@ -14,48 +21,34 @@ handleMediaChange(mediaQuery);
 function handleMediaChange(mediaQuery) {
   if (mediaQuery.matches) {
     // The media query is currently matching
-    slider.style.left = `${navlinks[0].children[1].offsetLeft   - 22}px`
-    slider.style.top = `${navlinks[0].children[1].offsetTop - 17}px`
-    navlinks[0].classList.add('active')
-function acitveLink() {
-    navlinks.forEach((item) => {
-        item.classList.remove('active')
-        this.classList.add('active')
-    })
-}
-navlinks.forEach((e) => {
-    e.addEventListener('click', acitveLink)
-})
-navlinks.forEach((e) => {
-    e.addEventListener('click', () => {
-      slider.style.left = `${e.children[1].offsetLeft   - 22}px`
-      slider.style.top = `${e.children[1].offsetTop - 17}px`
-    })
-})
-  } else {
-    // The media query is not currently matching
-    navlinks[0].classList.add('active')
-slider.style.width = `${navlinks[0].offsetWidth}px`
+    slider.style.left = `${navlinks[0].children[1].offsetLeft - 22}px`;
+    slider.style.top = `${navlinks[0].children[1].offsetTop - 17}px`;
+    
+    navlinks.forEach((e) => {
+      e.addEventListener("click", acitveLink);
+    });
+    navlinks.forEach((e) => {
+      e.addEventListener("click", () => {
+        slider.style.left = `${e.children[1].offsetLeft - 22}px`;
+        slider.style.top = `${e.children[1].offsetTop - 17}px`;
+      });
+    });
+  }
 
-function acitveLink() {
-    navlinks.forEach((item) => {
-        item.classList.remove('active')
-        this.classList.add('active')
-    })
-}
-navlinks.forEach((e) => {
-    e.addEventListener('click', acitveLink)
-})
-navlinks.forEach((e) => {
-    e.addEventListener('click', () => {
-        slider.style.left = `${e.offsetLeft}px`
-        slider.style.width = `${e.offsetWidth}px`
-    })
-})
+ else{
+    // The media query is not currently matching
+    slider.style.width = `${navlinks[0].offsetWidth}px`;
+    navlinks.forEach((e) => {
+      e.addEventListener("click", acitveLink);
+    });
+    navlinks.forEach((e) => {
+      e.addEventListener("click", () => {
+        slider.style.left = `${e.offsetLeft}px`;
+        slider.style.width = `${e.offsetWidth}px`;
+      });
+    });
   }
 }
-
-
 
 //  Heading type effect
 const typedTextSpan = document.querySelector(".typed-text");
