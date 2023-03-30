@@ -103,6 +103,9 @@ header #navbar #reg-btn #signup-btn:focus {
 .active {
   color: white !important;
 }
+.active i {
+  color: white !important;
+}
 
 @media only screen and (max-width: 992px) {
   header #logo {
@@ -119,34 +122,43 @@ header #navbar #reg-btn #signup-btn:focus {
   body {
     position: relative;
   }
-  header {
+  body #menu-bar {
+    position: absolute !important;
+    width: 100vw !important;
+    height: 14rem !important;
+    display: grid !important;
+    box-shadow: 0px -3px 15px 7px rgba(0, 0, 0, 0.19) !important;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    bottom: 0;
+  }
+  body #menu-bar .menu-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    margin: auto;
+    height: 100%;
+  }
+  body #menu-bar .menu-links a {
+    display: none;
+  }
+  body #menu-bar .menu-links i {
+    display: block !important;
+    color: black;
+    font-size: 1.2rem;
+  }
+  body #menu-bar #slider {
+    position: absolute;
+    height: 4rem !important;
+    display: block;
+    width: 4rem !important;
+  }
+  body header {
     position: fixed;
     bottom: 0;
   }
-  header #logo {
+  body header #logo {
     font-size: 1.2rem !important;
-  }
-  header #menu-bar {
-    position: absolute !important;
-    width: 100% !important;
-    height: 70% !important;
-    display: grid !important;
-    grid-template-columns: repeat(3, 1fr);
-    grid-template-rows: repeat(2, 1fr);
-  }
-  header #menu-bar .menu-links {
-    text-align: center;
-    width: 100%;
-    height: 100%;
-  }
-  header #menu-bar .menu-links a {
-    display: none;
-  }
-  header #menu-bar .menu-links i {
-    display: block !important;
-    color: black;
-  }
-  header #menu-bar #slider {
-    display: none;
   }
 }/*# sourceMappingURL=style.css.map */
