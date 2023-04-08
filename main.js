@@ -1,7 +1,20 @@
 // Js Variables ---------------------
+const menubar = document.getElementById('menu-bar')
+const banner = document.getElementById("banner-section")
+const about = document.getElementById('about-section')
+const capability = document.getElementById("capability-section")
 const navlinks = document.querySelectorAll(".menu-links");
 const mediaQuery = window.matchMedia("(max-width: 768px)");
-console.log(navlinks);
+const multiply = document.getElementById('close')
+const apps = document.getElementById('apps')
+// creating dom routing 
+
+
+
+const body = [banner,about,capability]
+body[0].style.display = "flex"
+
+
 const slider = document.getElementById("slider");
   //  using active link 
 navlinks[0].classList.add("active");
@@ -23,6 +36,7 @@ function handleMediaChange(mediaQuery) {
     // The media query is currently matching
     slider.style.left = `${navlinks[0].children[1].offsetLeft - 22}px`;
     slider.style.top = `${navlinks[0].children[1].offsetTop - 17}px`;
+
     
     navlinks.forEach((e) => {
       e.addEventListener("click", acitveLink);
@@ -31,9 +45,33 @@ function handleMediaChange(mediaQuery) {
       e.addEventListener("click", () => {
         slider.style.left = `${e.children[1].offsetLeft - 22}px`;
         slider.style.top = `${e.children[1].offsetTop - 17}px`;
+        menubar.style.bottom = '-1000%';
+        multiply.style.display = "none"
+        apps.style.display = 'block'
+
+        body.forEach(function(item){
+          item.style.display = "none"
+          if(item.getAttribute('data-effect') == e.getAttribute('data-output')){
+          item.style.display = "flex"
+          item.style.opacity = "1"
+          }
+        })
+      
       });
     });
+// Define menu shower buttons 
+ multiply.addEventListener('click',(e)=>{
+  menubar.style.bottom = '-1000%'
+  multiply.style.display = "none"
+  apps.style.display = 'block'
+ })
+ apps.addEventListener('click',(e)=>{
+  menubar.style.bottom = '0'
+  multiply.style.display = "block"
+  apps.style.display = "none "
+ })
   }
+
 
  else{
     // The media query is not currently matching
@@ -45,10 +83,17 @@ function handleMediaChange(mediaQuery) {
       e.addEventListener("click", () => {
         slider.style.left = `${e.offsetLeft}px`;
         slider.style.width = `${e.offsetWidth}px`;
+        body.forEach(function(item){
+          item.style.display = "none"
+          if(item.getAttribute('data-effect') == e.getAttribute('data-output')){
+          item.style.display = "flex"
+          }
+        })
       });
     });
   }
 }
+
 
 //  Heading type effect
 const typedTextSpan = document.querySelector(".typed-text");

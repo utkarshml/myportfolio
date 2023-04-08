@@ -1,3 +1,4 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap");
 * {
   margin: 0;
   padding: 0%;
@@ -7,6 +8,7 @@
 
 html,
 body {
+  position: relative;
   width: 100%;
   height: -moz-max-content;
   height: max-content;
@@ -54,7 +56,7 @@ header #navbar #menu-bar .menu-links {
   width: 25%;
   text-align: center;
   font-size: 1rem;
-  font-weight: 600;
+  font-weight: 700;
   color: hsl(247, 93%, 59%);
   z-index: 2;
 }
@@ -71,7 +73,7 @@ header #navbar #menu-bar #slider {
   background-color: hsl(247, 93%, 59%);
   border-radius: 2rem;
   z-index: 1;
-  transition: 0.6s all;
+  transition: 0.6s ease-in;
 }
 header #navbar .menu-showers {
   display: none;
@@ -89,11 +91,16 @@ header #navbar #reg-btn #login-btn {
   color: hsl(247, 93%, 59%);
   font-weight: 600;
 }
-header #navbar #reg-btn #signup-btn {
+header #navbar #reg-btn .btn-style {
   background-color: hsl(247, 93%, 59%) !important;
   color: white !important;
   font-weight: 600;
   font-size: 1rem;
+}
+header #navbar #reg-btn .btn-style:hover {
+  background-color: white !important;
+  border: 1px solid hsl(247, 93%, 59%) !important;
+  color: hsl(247, 93%, 59%) !important;
 }
 header #navbar #reg-btn #signup-btn:focus {
   outline: hsl(247, 93%, 59%);
@@ -105,6 +112,158 @@ header #navbar #reg-btn #signup-btn:focus {
 }
 .active i {
   color: white !important;
+}
+
+.header-banner {
+  transition: 0.4s;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+.header-banner #banner-title {
+  display: flex;
+  flex-direction: column;
+}
+.header-banner #banner-title h1 {
+  font-size: 4rem;
+  font-weight: 700;
+}
+.header-banner #banner-title .typed-text {
+  color: hsl(247, 93%, 59%);
+  margin-left: 2rem;
+}
+.header-banner #banner-title .cursor {
+  width: 0.5rem;
+  display: inline-block;
+  height: 4rem;
+  margin-left: 0.5rem;
+  animation: blink 0.4s;
+  border-radius: 5px;
+  background-color: black;
+}
+@keyframes blink {
+  0% {
+    opacity: 1;
+  }
+  25% {
+    opacity: 0.7;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  75% {
+    opacity: 0.4;
+  }
+  100% {
+    opacity: 0.2;
+  }
+}
+.header-banner #banner-title .banner-title-sub-heading {
+  font-size: 1.8rem;
+  color: hsl(247, 93%, 59%);
+  font-weight: 600;
+  font-family: "Cinzel", serif;
+}
+.header-banner #banner-title p {
+  font-size: 1rem;
+  font-weight: 600;
+  margin-top: 0.5rem;
+  text-transform: capitalize;
+}
+
+#about-section {
+  height: 100vh;
+  transition: 0.4s;
+  display: none;
+  margin-top: 6rem;
+  align-items: center;
+  justify-content: center;
+}
+#about-section #about-container {
+  padding-bottom: 10vh;
+}
+#about-section #about-container #aboutimg #img {
+  background-image: url("/img/WhatsApp Image 2023-04-02 at 1.35.23 AM.jpeg");
+  background-position: center;
+  background-size: cover;
+  width: 15rem;
+  height: 25rem;
+  border-radius: 1rem;
+  box-shadow: 5px 15px 5px 5px rgba(0, 0, 0, 0.2);
+  transform: rotateZ(-5deg);
+}
+#about-section #about-container .discribe-div {
+  display: flex;
+  padding-left: 2rem;
+  flex-direction: column;
+  align-items: start;
+}
+#about-section #about-container .discribe-div h4 {
+  font-weight: 600;
+  text-transform: capitalize;
+  font-family: "Cinzel", "poppins", sans-serif;
+}
+#about-section #about-container .discribe-div h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  color: hsl(247, 93%, 59%);
+}
+#about-section #about-container .discribe-div p {
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: start;
+}
+#about-section #about-container .discribe-div .btn-style {
+  background-color: hsl(247, 93%, 59%) !important;
+  color: white !important;
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+#capability-section {
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 3rem;
+  width: 100%;
+}
+#capability-section .nav-tabs .nav-link {
+  font-family: "poppins", sans-serif !important;
+  color: hsl(247, 93%, 59%);
+  font-weight: 600;
+}
+#capability-section .nav-tabs .nav-link.active {
+  border-radius: 2rem !important;
+  background-color: hsl(247, 93%, 59%) !important;
+}
+#capability-section #nav-tabContent {
+  height: 100vh;
+  width: 100%;
+}
+#capability-section #nav-tabContent .tab-pane {
+  height: 100%;
+}
+#capability-section #nav-tabContent .tab-pane .progress {
+  display: flex;
+  height: -moz-fit-content;
+  height: fit-content;
+  flex-direction: column;
+  border-radius: 2rem;
+  padding: 1rem rem;
+}
+#capability-section #nav-tabContent .tab-pane .progress span {
+  font-size: 1rem;
+  font-family: "Cinzel", sans-serif;
+  font-weight: 600;
+  color: black;
+  margin-top: 1rem;
+}
+#capability-section #nav-tabContent .tab-pane .progress .progress-bar {
+  background-color: hsl(247, 93%, 59%);
 }
 
 @media only screen and (max-width: 992px) {
@@ -122,17 +281,51 @@ header #navbar #reg-btn #signup-btn:focus {
   body {
     position: relative;
   }
-  body #menu-bar {
+  body header {
+    position: fixed;
+    bottom: 0;
+    height: 4rem;
+    border-radius: 2rem 2rem 0 0;
+    box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.1) !important;
+  }
+  body header #navbar #logo {
+    font-size: 1.12rem !important;
+    position: absolute;
+    left: 2rem;
+    bottom: 0.7rem;
+  }
+  body header #navbar .menu-showers {
+    display: block !important;
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
+  }
+  body header #navbar .menu-showers .uil-multiply {
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+  }
+  body header #navbar .menu-showers .uil-apps {
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+  body header #navbar #reg-btn {
+    display: none !important;
+  }
+  body header #navbar #menu-bar {
     position: absolute !important;
+    border-radius: 2rem 2rem 0 0;
     width: 100vw !important;
     height: 14rem !important;
     display: grid !important;
     box-shadow: 0px -3px 15px 7px rgba(0, 0, 0, 0.19) !important;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(2, 1fr);
-    bottom: 0;
+    bottom: -1000%;
+    padding-bottom: 3rem;
+    transition: all 0.5s;
   }
-  body #menu-bar .menu-links {
+  body header #navbar #menu-bar .menu-links {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -140,25 +333,79 @@ header #navbar #reg-btn #signup-btn:focus {
     margin: auto;
     height: 100%;
   }
-  body #menu-bar .menu-links a {
+  body header #navbar #menu-bar .menu-links a {
     display: none;
   }
-  body #menu-bar .menu-links i {
+  body header #navbar #menu-bar .menu-links i {
     display: block !important;
-    color: black;
+    color: hsl(247, 93%, 59%);
     font-size: 1.2rem;
+    cursor: pointer;
   }
-  body #menu-bar #slider {
+  body header #navbar #menu-bar #slider {
     position: absolute;
     height: 4rem !important;
     display: block;
     width: 4rem !important;
   }
-  body header {
-    position: fixed;
-    bottom: 0;
+  .header-banner {
+    height: 60vh;
   }
-  body header #logo {
-    font-size: 1.2rem !important;
+  .header-banner #banner-title h1 {
+    font-size: 3rem;
+  }
+  .header-banner #banner-title h1 .typed-text {
+    margin-left: 0.5rem;
+  }
+  .header-banner #banner-title h1 .cursor {
+    width: 0.4rem;
+    height: 3.2rem;
+  }
+  .header-banner #banner-title .banner-title-sub-heading {
+    font-size: 1.5rem;
+  }
+  .header-banner #banner-title p {
+    font-size: 1rem;
+    font-weight: 600;
+  }
+  #about-section {
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+  }
+  #about-section #about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #about-section #about-container #aboutimg {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  #about-section #about-container #aboutimg #img {
+    transform: rotateZ(0deg) !important;
+  }
+  #about-section #about-container .discribe-div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  #about-section #about-container .discribe-div h4 {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: "Cinzel", "poppins", sans-serif;
+  }
+  #about-section #about-container .discribe-div h1 {
+    font-size: 3rem;
+    font-weight: 700;
+    color: hsl(247, 93%, 59%);
+  }
+  #about-section #about-container .discribe-div p {
+    font-size: 1rem;
+    font-weight: 500;
+    text-align: start;
   }
 }/*# sourceMappingURL=style.css.map */

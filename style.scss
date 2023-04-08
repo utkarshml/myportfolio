@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap");
+
 * {
   margin: 0;
   padding: 0%;
@@ -7,11 +9,11 @@
 
 html,
 body {
+  position: relative;
   width: 100%;
   height: max-content;
   background-color: white;
 }
-
 header {
   display: block;
   position: fixed;
@@ -19,7 +21,6 @@ header {
   width: 100%;
   height: 5rem;
   background: white;
-
   #navbar {
     display: flex;
     align-items: center;
@@ -55,7 +56,7 @@ header {
         width: calc(100% / 4);
         text-align: center;
         font-size: 1rem;
-        font-weight: 600;
+        font-weight: 700;
         color: hsl(247, 93%, 59%);
         z-index: 2;
 
@@ -75,7 +76,7 @@ header {
         background-color: hsl(247, 93%, 59%);
         border-radius: 2rem;
         z-index: 1;
-        transition: 0.6s all;
+        transition: 0.6s ease-in;
       }
     }
 
@@ -97,11 +98,16 @@ header {
         font-weight: 600;
       }
 
-      #signup-btn {
+      .btn-style {
         background-color: hsl(247, 93%, 59%) !important;
         color: white !important;
         font-weight: 600;
         font-size: 1rem;
+        &:hover {
+          background-color: white !important;
+          border: 1px solid hsl(247, 93%, 59%) !important;
+          color: hsl(247, 93%, 59%) !important;
+        }
       }
 
       #signup-btn:focus {
@@ -118,7 +124,162 @@ header {
     color: white !important;
   }
 }
-
+// header Banner css
+.header-banner {
+  transition: 0.4s;
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+  #banner-title {
+    display: flex;
+    flex-direction: column;
+    h1 {
+      font-size: 4rem;
+      font-weight: 700;
+    }
+    .typed-text {
+      color: hsl(247, 93%, 59%);
+      margin-left: 2rem;
+    }
+    .cursor {
+      width: 0.5rem;
+      display: inline-block;
+      height: 4rem;
+      margin-left: 0.5rem;
+      animation: blink 0.4s;
+      border-radius: 5px;
+      background-color: black;
+      @keyframes blink {
+        0% {
+          opacity: 1;
+        }
+        25% {
+          opacity: 0.7;
+        }
+        50% {
+          opacity: 0.5;
+        }
+        75% {
+          opacity: 0.4;
+        }
+        100% {
+          opacity: 0.2;
+        }
+      }
+    }
+    .banner-title-sub-heading {
+      font-size: 1.8rem;
+      color: hsl(247, 93%, 59%);
+      font-weight: 600;
+      font-family: "Cinzel", serif;
+    }
+    p {
+      font-size: 1rem;
+      font-weight: 600;
+      margin-top: 0.5rem;
+      text-transform: capitalize;
+    }
+  }
+}
+// About section of this website in home page
+#about-section {
+  height: 100vh;
+  transition: 0.4s;
+  display: none;
+  margin-top: 6rem;
+  align-items: center;
+  justify-content: center;
+  #about-container {
+    padding-bottom: 10vh;
+    #aboutimg {
+      #img {
+        background-image: url("/img/WhatsApp\ Image\ 2023-04-02\ at\ 1.35.23\ AM.jpeg");
+        background-position: center;
+        background-size: cover;
+        width: 15rem;
+        height: 25rem;
+        border-radius: 1rem;
+        box-shadow: 5px 15px 5px 5px rgb(0, 0, 0, 0.2);
+        transform: rotateZ(-5deg);
+      }
+    }
+    .discribe-div {
+      display: flex;
+      padding-left: 2rem;
+      flex-direction: column;
+      align-items: start;
+      h4 {
+        font-weight: 600;
+        text-transform: capitalize;
+        font-family: "Cinzel", "poppins", sans-serif;
+      }
+      h1 {
+        font-size: 3rem;
+        font-weight: 700;
+        color: hsl(247, 93%, 59%);
+      }
+      p {
+        font-size: 1rem;
+        font-weight: 600;
+        text-align: start;
+      }
+      .btn-style {
+        background-color: hsl(247, 93%, 59%) !important;
+        color: white !important;
+        font-weight: 600;
+        font-size: 1rem;
+      }
+    }
+  }
+}
+// Capability section css
+#capability-section {
+  display: none;
+  flex-direction: column;
+  align-items: start;
+  justify-content: center;
+  height: 100vh;
+  margin-top: 3rem;
+  width: 100%;
+  .nav-tabs {
+    .nav-link {
+      font-family: "poppins", sans-serif !important;
+      color: hsl(247, 93%, 59%);
+      font-weight: 600;
+      &.active {
+        border-radius: 2rem !important;
+        background-color: hsl(247, 93%, 59%) !important;
+      }
+    }
+  }
+  #nav-tabContent {
+    height: 100vh;
+    width: 100%;
+    .tab-pane {
+      height: 100%;
+      .progress {
+        display: flex;
+        height:fit-content;
+        flex-direction: column;
+        border-radius: 2rem;
+         padding: 1rem rem ;
+         
+        span{
+          font-size: 1rem;
+          font-family: "Cinzel", sans-serif;
+          font-weight: 600;
+          color: black;
+          margin-top: 1rem;
+        }
+        .progress-bar{
+          background-color: hsl(247, 93%, 59%);
+        }
+      }
+    }
+  }
+}
 // responsive media query ------------
 @media only screen and (max-width: 992px) {
   header {
@@ -140,45 +301,140 @@ header {
   body {
     position: relative;
 
-    #menu-bar {
-      position: absolute !important;
-      width: 100vw !important;
-      height: 14rem !important;
-      display: grid !important;
-      box-shadow: 0px -3px 15px 7px rgba(0, 0, 0, 0.19) !important;
-      grid-template-columns: repeat(3, 1fr);
-      grid-template-rows: repeat(2, 1fr);
-      bottom: 0;
-      .menu-links {
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        width: 100% !important;
-        margin: auto;
-        height: 100%;
-        a {
-          display: none;
-        }
-        i {
-          display: block !important;
-          color: black;
-          font-size: 1.2rem;
-        }
-      }
-      #slider {
-        position: absolute;
-        height: 4rem !important;
-        display: block;
-        width: 4rem !important;
-      }
-    }
-
     header {
       position: fixed;
       bottom: 0;
+      height: 4rem;
+      border-radius: 2rem 2rem 0 0;
+      box-shadow: 0px 0px 5px 4px rgba(0, 0, 0, 0.1) !important;
 
-      #logo {
-        font-size: 1.2rem !important;
+      #navbar {
+        #logo {
+          font-size: 1.12rem !important;
+          position: absolute;
+          left: 2rem;
+          bottom: 0.7rem;
+        }
+        .menu-showers {
+          display: block !important;
+          position: absolute;
+          right: 2rem;
+          bottom: 1rem;
+          .uil-multiply {
+            font-size: 1.2rem;
+            cursor: pointer;
+            display: none;
+          }
+          .uil-apps {
+            font-size: 1.2rem;
+            cursor: pointer;
+          }
+        }
+        #reg-btn {
+          display: none !important;
+        }
+
+        #menu-bar {
+          position: absolute !important;
+          border-radius: 2rem 2rem 0 0;
+          width: 100vw !important;
+          height: 14rem !important;
+          display: grid !important;
+          box-shadow: 0px -3px 15px 7px rgba(0, 0, 0, 0.19) !important;
+          grid-template-columns: repeat(3, 1fr);
+          grid-template-rows: repeat(2, 1fr);
+          bottom: -1000%;
+          padding-bottom: 3rem;
+          transition: all 0.5s;
+          .menu-links {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            width: 100% !important;
+            margin: auto;
+            height: 100%;
+            a {
+              display: none;
+            }
+            i {
+              display: block !important;
+              color: hsl(247, 93%, 59%);
+              font-size: 1.2rem;
+              cursor: pointer;
+            }
+          }
+          #slider {
+            position: absolute;
+            height: 4rem !important;
+            display: block;
+            width: 4rem !important;
+          }
+        }
+      }
+    }
+  }
+
+  .header-banner {
+    height: 60vh;
+    #banner-title {
+      h1 {
+        font-size: 3rem;
+        .typed-text {
+          margin-left: 0.5rem;
+        }
+        .cursor {
+          width: 0.4rem;
+          height: 3.2rem;
+        }
+      }
+      .banner-title-sub-heading {
+        font-size: 1.5rem;
+      }
+      p {
+        font-size: 1rem;
+        font-weight: 600;
+      }
+    }
+  }
+
+  // about section responsive
+  #about-section {
+    height: 100vh;
+    display: none;
+    align-items: center;
+    justify-content: center;
+    #about-container {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      #aboutimg {
+        display: flex;
+        justify-content: center;
+        width: 100%;
+        margin-bottom: 2rem;
+        #img {
+          transform: rotateZ(0deg) !important;
+        }
+      }
+      .discribe-div {
+        display: flex;
+        flex-direction: column;
+        align-items: start;
+        h4 {
+          font-weight: 600;
+          text-transform: capitalize;
+          font-family: "Cinzel", "poppins", sans-serif;
+        }
+        h1 {
+          font-size: 3rem;
+          font-weight: 700;
+          color: hsl(247, 93%, 59%);
+        }
+        p {
+          font-size: 1rem;
+          font-weight: 500;
+          text-align: start;
+        }
       }
     }
   }
