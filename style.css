@@ -174,7 +174,7 @@ header #navbar #reg-btn #signup-btn:focus {
 }
 
 #about-section {
-  height: 100vh;
+  height: 80vh;
   transition: 0.4s;
   display: none;
   margin-top: 6rem;
@@ -223,12 +223,13 @@ header #navbar #reg-btn #signup-btn:focus {
 }
 
 #capability-section {
+  margin-top: 5rem;
   display: none;
   flex-direction: column;
   align-items: start;
   justify-content: center;
-  height: 100vh;
-  margin-top: 3rem;
+  height: 80vh;
+  align-items: center;
   width: 100%;
 }
 #capability-section .nav-tabs .nav-link {
@@ -253,7 +254,7 @@ header #navbar #reg-btn #signup-btn:focus {
   height: fit-content;
   flex-direction: column;
   border-radius: 2rem;
-  padding: 1rem rem;
+  padding-bottom: 1rem;
 }
 #capability-section #nav-tabContent .tab-pane .progress span {
   font-size: 1rem;
@@ -264,6 +265,32 @@ header #navbar #reg-btn #signup-btn:focus {
 }
 #capability-section #nav-tabContent .tab-pane .progress .progress-bar {
   background-color: hsl(247, 93%, 59%);
+}
+#capability-section #nav-tabContent .project {
+  height: 80vh;
+}
+#capability-section #nav-tabContent .project h1 {
+  font-size: 2rem;
+  color: black;
+  font-weight: 600;
+}
+#capability-section #nav-tabContent .project .swiper-slide {
+  margin: auto;
+  height: -moz-max-content;
+  height: max-content;
+}
+#capability-section #nav-tabContent .project .swiper-slide .card .card-body .card-title {
+  color: hsl(247, 93%, 59%);
+  font-weight: 600;
+}
+#capability-section #nav-tabContent .project .swiper-slide .card .card-body .card-text {
+  color: black;
+  font-weight: 500;
+}
+#capability-section #nav-tabContent .project .swiper-slide .card .card-body .card-btn {
+  margin: auto;
+  background: hsl(247, 93%, 59%) !important;
+  color: white;
 }
 
 @media only screen and (max-width: 992px) {
