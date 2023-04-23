@@ -4,7 +4,7 @@ const banner = document.getElementById("banner-section")
 const about = document.getElementById('about-section')
 const capability = document.getElementById("capability-section")
 const navlinks = document.querySelectorAll(".menu-links");
-const mediaQuery = window.matchMedia("(max-width: 768px)");
+const mediaQuery = window.matchMedia("(max-width:768px)");
 const multiply = document.getElementById('close')
 const apps = document.getElementById('apps')
 // creating dom routing 
@@ -25,10 +25,18 @@ navlinks[0].classList.add("active");
       });
     }
 // Add an event listener to check when the media query changes
-mediaQuery.addListener(handleMediaChange);
+window.addEventListener('orientationchange',()=>{
+  mediaQuery.addListener(handleMediaChange);
+
+})
+window.addEventListener("orientationchange", function() {
+  // Reload the page
+  location.reload();
+});
 
 // Check the initial state of the media query
 handleMediaChange(mediaQuery);
+
 
 // Define the function to handle media changes
 function handleMediaChange(mediaQuery) {
@@ -48,12 +56,18 @@ function handleMediaChange(mediaQuery) {
         menubar.style.bottom = '-1000%';
         multiply.style.display = "none"
         apps.style.display = 'block'
-
         body.forEach(function(item){
           item.style.display = "none"
           if(item.getAttribute('data-effect') == e.getAttribute('data-output')){
           item.style.display = "flex"
           item.style.opacity = "1"
+          if (item.getAttribute("data-effect") == "About"){
+            for(let i = 0 ; i<= 4 ; i++){
+              value = document.getElementsByClassName(`bubble${i}`);
+              value[0].hidden  = true;
+            }
+          }
+         
           }
         })
       
@@ -66,7 +80,7 @@ function handleMediaChange(mediaQuery) {
   apps.style.display = 'block'
  })
  apps.addEventListener('click',(e)=>{
-  menubar.style.bottom = '0'
+  menubar.style.bottom = '-50%'
   multiply.style.display = "block"
   apps.style.display = "none "
  })
@@ -101,7 +115,7 @@ const cursorSpan = document.querySelector(".cursor");
 
 const textArray = ["Utkarsh", "Student", "Coder"];
 const typingDelay = 200;
-const erasingDelay = 100;
+const erasingDelay = 50;
 const newTextDelay = 2000; // Delay between current and next text
 let textArrayIndex = 0;
 let charIndex = 0;
@@ -133,11 +147,11 @@ function erase() {
     cursorSpan.classList.remove("typing");
     textArrayIndex++;
     if (textArrayIndex >= textArray.length) textArrayIndex = 0;
-    setTimeout(type, typingDelay + 1100);
+    setTimeout(type, typingDelay + 1000);
   }
 }
 
 document.addEventListener("DOMContentLoaded", function () {
   // On DOM Load initiate the effect
-  if (textArray.length) setTimeout(type, newTextDelay + 250);
+  if (textArray.length) setTimeout(type, newTextDelay + 20);
 });

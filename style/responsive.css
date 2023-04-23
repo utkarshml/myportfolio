@@ -1,0 +1,213 @@
+@media only screen and (max-width: 992px) {
+  header #logo {
+    font-size: 1.5rem !important;
+  }
+  header #menu-bar {
+    height: 2rem !important;
+  }
+  header #menu-bar .menu-links {
+    font-size: 0.8rem !important;
+  }
+}
+@media only screen and (max-width: 992px) {
+  body {
+    position: relative;
+  }
+  body header {
+    position: fixed;
+    width: 90vw;
+    bottom: 1rem;
+    border-radius: 2rem;
+    height: 4rem;
+    margin: 0rem 1rem;
+    z-index: 1001;
+    padding: 1rem 0.1rem;
+    background: #3b54e2;
+    box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1) !important;
+  }
+  body header #navbar #logo {
+    font-size: 1.12rem !important;
+    position: absolute;
+    left: 2rem;
+    color: white;
+    bottom: 0.7rem;
+  }
+  body header #navbar .menu-showers {
+    display: block !important;
+    position: absolute;
+    right: 2rem;
+    bottom: 1rem;
+  }
+  body header #navbar .menu-showers .uil-multiply {
+    font-size: 1.2rem;
+    cursor: pointer;
+    display: none;
+  }
+  body header #navbar .menu-showers .uil-apps {
+    font-size: 1.2rem;
+    cursor: pointer;
+    color: white;
+  }
+  body header #navbar #reg-btn {
+    display: none !important;
+  }
+  body header #navbar #menu-bar {
+    position: absolute !important;
+    border-radius: 2rem 2rem 0 0;
+    width: 100vw !important;
+    height: 14rem !important;
+    display: grid !important;
+    box-shadow: 0px -3px 15px 7px rgba(0, 0, 0, 0.19) !important;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(2, 1fr);
+    bottom: -1000%;
+    padding-bottom: 5rem;
+    padding-top: 1rem;
+    transition: all 0.5s;
+  }
+  body header #navbar #menu-bar .menu-links {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100% !important;
+    margin: auto;
+    height: 100%;
+  }
+  body header #navbar #menu-bar .menu-links a {
+    display: none;
+  }
+  body header #navbar #menu-bar .menu-links i {
+    display: block !important;
+    color: hsl(247, 93%, 59%);
+    font-size: 1.2rem;
+    cursor: pointer;
+    font-weight: 700;
+  }
+  body header #navbar #menu-bar #slider {
+    position: absolute;
+    height: 4rem !important;
+    display: block;
+    width: 4rem !important;
+  }
+  .header-banner {
+    height: 60vh;
+  }
+  .header-banner .banner-image {
+    display: none;
+  }
+  .header-banner #banner-title {
+    width: 100%;
+  }
+  .header-banner #banner-title h1 {
+    z-index: 1000;
+    font-size: 3rem;
+  }
+  .header-banner #banner-title h1 .typed-text {
+    margin-left: 0.5rem;
+    animation: slide-left 1s ease-in-out;
+  }
+  .header-banner #banner-title h1 .cursor {
+    width: 0.4rem;
+    height: 3.2rem;
+  }
+  .header-banner #banner-title .banner-title-sub-heading {
+    font-size: 1.5rem;
+  }
+  .header-banner #banner-title p {
+    font-size: 0.9rem;
+    font-weight: 500;
+  }
+  #about-section {
+    box-shadow: none !important;
+    background-color: white;
+    height: 100vh;
+    top: -2rem;
+    position: inherit;
+    display: none;
+    margin-top: 0rem;
+    padding-top: 2rem;
+    align-items: center;
+    justify-content: center;
+  }
+  #about-section #about-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #about-section #about-container #aboutimg {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    margin-bottom: 2rem;
+  }
+  #about-section #about-container #aboutimg #img {
+    transform: rotateZ(0deg) !important;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+  #about-section #about-container .discribe-div {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+  }
+  #about-section #about-container .discribe-div h4 {
+    font-weight: 600;
+    text-transform: capitalize;
+    font-family: "Cinzel", "poppins", sans-serif;
+  }
+  #about-section #about-container .discribe-div h1 {
+    font-size: 1.6rem;
+    font-weight: 700;
+    display: inline;
+  }
+  #about-section #about-container .discribe-div p {
+    font-size: 12px;
+    font-weight: 500;
+    text-align: start;
+  }
+  .bubble0 {
+    height: 2rem;
+    width: 2rem;
+    background-size: 10px 10px;
+    bottom: -2rem;
+  }
+  @keyframes jump {
+    0% {
+      bottom: -2rem;
+    }
+    50% {
+      bottom: -1rem;
+    }
+    100% {
+      bottom: -2rem;
+    }
+  }
+  .bubble1 {
+    height: 4rem;
+    width: 4rem;
+    top: 1rem;
+  }
+  .bubble2 {
+    top: 1rem;
+    border-width: 10px 0 10px 15px !important;
+  }
+  .bubble3 {
+    bottom: 1rem;
+    width: 4rem;
+    left: 1rem;
+  }
+  @keyframes zig {
+    0% {
+      bottom: 1rem;
+      left: 1rem;
+    }
+    50% {
+      bottom: 2rem;
+      left: 2rem;
+    }
+    100% {
+      bottom: 1rem;
+      left: 1rem;
+    }
+  }
+}/*# sourceMappingURL=responsive.css.map */
