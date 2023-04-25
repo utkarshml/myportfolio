@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap");
-
+@import "../MyPortfolio/style/cap.scss";
 @import "../MyPortfolio/style/about.scss";
 
 * {
@@ -46,6 +46,7 @@
 html,
 body {
   position: relative;
+
   width: 100%;
   
   height: max-content;
@@ -506,60 +507,4 @@ animation: zig 4s infinite;
       }
       
     }
-  
-
-  #nav-tabContent { 
-    height: 100vh;
-    width: 100%;
-    .tab-pane {
-      height: 100%;
-      .progress {
-        display: flex;
-        height:fit-content;
-        flex-direction: column;
-        border-radius: 2rem;
-        padding-bottom: 1rem;
-         
-        span{
-          font-size: 1rem;
-          font-family: "Cinzel", sans-serif;
-          font-weight: 600;
-          color: black;
-          margin-top: 1rem;
-        }
-        .progress-bar{
-          background-color: hsl(247, 93%, 59%);
-        }
-      }
-    }
-    .project{
-      height: 80vh;
-      h1{
-        font-size: 2rem;
-        color: black;
-        font-weight: 600;
-      }
-      .swiper-slide{
-        margin: auto;
-        height:max-content;
-        .card{
-       .card-body{
-        .card-title{
-          color: hsl(247, 93%, 59%);
-          font-weight: 600;
-        }
-        .card-text{
-          color: black;
-          font-weight: 500;
-        }
-       .card-btn {
-        margin: auto;
-        background: hsl(247, 93%, 59%)!important;
-        color: white;
-       }
-       }
-        }
-      }
-    }
-  }
 @import "../MyPortfolio/style/responsive.scss";

@@ -87,24 +87,4 @@
       }
     }
   }
-  // Capability section css
-  #capability-section {
-    margin-top: 5rem;
-    display: none;
-    flex-direction: column;
-    align-items: start;
-    justify-content: center;
-    height: 80vh;
-    align-items: center;
-    width: 100%;
-    .nav-tabs {
-      .nav-link {
-        font-family: "poppins", sans-serif !important;
-        color: hsl(247, 93%, 59%);
-        font-weight: 600;
-        &.active {
-          border-radius: 2rem !important;
-          background-color: hsl(247, 93%, 59%) !important;
-        }
-      }
-    }}
+ 

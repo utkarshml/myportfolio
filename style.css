@@ -1,4 +1,250 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap");
+@keyframes progressAnimation {
+  0% {
+    width: 0%;
+  }
+  100% {
+    display: block;
+  }
+}
+#capability-section {
+  display: none;
+  margin-top: 4rem;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+}
+#capability-section .nav-tabs .nav-link {
+  font-family: "poppins", sans-serif !important;
+  color: hsl(247, 93%, 59%);
+  font-weight: 600;
+}
+#capability-section .nav-tabs .nav-link.active {
+  border-radius: 2rem !important;
+  background-color: hsl(247, 93%, 59%) !important;
+}
+#capability-section #nav-tabContent {
+  margin-top: 4rem;
+  height: 100vh;
+  width: 100%;
+}
+#capability-section #nav-tabContent .tab-pane {
+  height: 100%;
+}
+#capability-section #nav-tabContent .tab-pane span {
+  font-size: 1rem;
+  font-family: "Cinzel", sans-serif;
+  font-weight: 700;
+  color: black;
+  margin-top: 1rem;
+}
+#capability-section #nav-tabContent .tab-pane .progress {
+  height: 1rem;
+  border-radius: 2rem;
+  padding-bottom: 1rem;
+  background-color: #d4d4d4;
+  overflow: visible !important;
+}
+#capability-section #nav-tabContent .tab-pane .progress .html {
+  background-color: #f44336 !important;
+  height: 1rem;
+  position: relative;
+  border-radius: 2rem;
+  animation: progressAnimation 1s ease-in-out;
+  width: 90%;
+}
+#capability-section #nav-tabContent .tab-pane .progress .html span {
+  float: right;
+  background-color: var(--purple);
+  color: #ffffff;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: -20px;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -13px;
+  overflow: visible;
+}
+#capability-section #nav-tabContent .tab-pane .progress {
+  height: 1rem;
+  border-radius: 2rem;
+  padding-bottom: 1rem;
+  background-color: #d4d4d4;
+  overflow: visible !important;
+}
+#capability-section #nav-tabContent .tab-pane .progress .css {
+  background-color: rgb(158, 7, 158) !important;
+  animation: progressAnimation 1s ease-in-out;
+  height: 1rem;
+  border-radius: 2rem;
+  width: 80%;
+}
+#capability-section #nav-tabContent .tab-pane .progress .css span {
+  float: right;
+  background-color: var(--purple);
+  color: #ffffff;
+  height: 40px;
+  width: 40px;
+  font-size: 15px;
+  border-radius: 50%;
+  margin-right: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -13px;
+  overflow: visible;
+}
+#capability-section #nav-tabContent .tab-pane .progress {
+  margin: 1rem 0rem;
+}
+#capability-section #nav-tabContent .tab-pane .progress {
+  height: 1rem;
+  border-radius: 2rem;
+  padding-bottom: 1rem;
+  background-color: #d4d4d4;
+  overflow: visible !important;
+}
+#capability-section #nav-tabContent .tab-pane .progress .javascript {
+  background-color: #ff9800 !important;
+  animation: progressAnimation 1s ease-in-out;
+  width: 75%;
+  height: 1rem;
+  border-radius: 2rem;
+}
+#capability-section #nav-tabContent .tab-pane .progress .javascript span {
+  float: right;
+  background-color: var(--purple);
+  color: #ffffff;
+  height: 40px;
+  font-size: 15px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -13px;
+  overflow: visible;
+}
+#capability-section #nav-tabContent .tab-pane .progress {
+  height: 1rem;
+  border-radius: 2rem;
+  padding-bottom: 1rem;
+  background-color: #d4d4d4;
+  overflow: visible !important;
+}
+#capability-section #nav-tabContent .tab-pane .progress .python {
+  background-color: #4caf50 !important;
+  animation: progressAnimation 1s ease-in-out;
+  height: 1rem;
+  border-radius: 2rem;
+  width: 70%;
+}
+#capability-section #nav-tabContent .tab-pane .progress .python span {
+  float: right;
+  height: 40px;
+  font-size: 15px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: -20px;
+  background-color: var(--purple);
+  color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -13px;
+  overflow: visible;
+}
+#capability-section #nav-tabContent .tab-pane .progress {
+  height: 1rem;
+  border-radius: 2rem;
+  padding-bottom: 1rem;
+  background-color: #d4d4d4;
+  overflow: visible !important;
+}
+#capability-section #nav-tabContent .tab-pane .progress .figma {
+  background-color: #e91e63 !important;
+  animation: progressAnimation 1s ease-in-out;
+  height: 1rem;
+  border-radius: 2rem;
+  width: 65%;
+}
+#capability-section #nav-tabContent .tab-pane .progress .figma span {
+  float: right;
+  background-color: var(--purple);
+  color: #ffffff;
+  height: 40px;
+  font-size: 15px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: -20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -13px;
+  overflow: visible;
+}
+#capability-section #nav-tabContent .tab-pane .progress {
+  height: 1rem;
+  border-radius: 2rem;
+  padding-bottom: 1rem;
+  background-color: #d4d4d4;
+  overflow: visible !important;
+}
+#capability-section #nav-tabContent .tab-pane .progress .mern {
+  background-color: hsl(247, 93%, 59%);
+  animation: progressAnimation 1s ease-in-out;
+  height: 1rem;
+  border-radius: 2rem;
+  width: 25%;
+}
+#capability-section #nav-tabContent .tab-pane .progress .mern span {
+  float: right;
+  height: 40px;
+  width: 40px;
+  border-radius: 50%;
+  margin-right: -20px;
+  background-color: var(--purple);
+  color: #ffffff;
+  font-size: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin-top: -13px;
+  overflow: visible;
+}
+
+.project {
+  height: 80vh;
+}
+.project h1 {
+  font-size: 2rem;
+  color: black;
+  font-weight: 600;
+}
+.project .swiper-slide {
+  margin: auto;
+  height: -moz-max-content;
+  height: max-content;
+}
+.project .swiper-slide .card .card-body .card-title {
+  color: hsl(247, 93%, 59%);
+  font-weight: 600;
+}
+.project .swiper-slide .card .card-body .card-text {
+  color: black;
+  font-weight: 500;
+}
+.project .swiper-slide .card .card-body .card-btn {
+  margin: auto;
+  background: hsl(247, 93%, 59%) !important;
+  color: white;
+}
+
 #about-section {
   animation: flip-effect 1s ease-in-out;
   box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
@@ -81,26 +327,6 @@
   color: whitesmoke !important;
   font-weight: 600;
   font-size: 1rem;
-}
-
-#capability-section {
-  margin-top: 5rem;
-  display: none;
-  flex-direction: column;
-  align-items: start;
-  justify-content: center;
-  height: 80vh;
-  align-items: center;
-  width: 100%;
-}
-#capability-section .nav-tabs .nav-link {
-  font-family: "poppins", sans-serif !important;
-  color: hsl(247, 93%, 59%);
-  font-weight: 600;
-}
-#capability-section .nav-tabs .nav-link.active {
-  border-radius: 2rem !important;
-  background-color: hsl(247, 93%, 59%) !important;
 }
 
 * {
@@ -587,58 +813,6 @@ p {
 }
 .social-media .social-link:nth-child(1):hover i {
   color: #E91E63;
-}
-
-#nav-tabContent {
-  height: 100vh;
-  width: 100%;
-}
-#nav-tabContent .tab-pane {
-  height: 100%;
-}
-#nav-tabContent .tab-pane .progress {
-  display: flex;
-  height: -moz-fit-content;
-  height: fit-content;
-  flex-direction: column;
-  border-radius: 2rem;
-  padding-bottom: 1rem;
-}
-#nav-tabContent .tab-pane .progress span {
-  font-size: 1rem;
-  font-family: "Cinzel", sans-serif;
-  font-weight: 600;
-  color: black;
-  margin-top: 1rem;
-}
-#nav-tabContent .tab-pane .progress .progress-bar {
-  background-color: hsl(247, 93%, 59%);
-}
-#nav-tabContent .project {
-  height: 80vh;
-}
-#nav-tabContent .project h1 {
-  font-size: 2rem;
-  color: black;
-  font-weight: 600;
-}
-#nav-tabContent .project .swiper-slide {
-  margin: auto;
-  height: -moz-max-content;
-  height: max-content;
-}
-#nav-tabContent .project .swiper-slide .card .card-body .card-title {
-  color: hsl(247, 93%, 59%);
-  font-weight: 600;
-}
-#nav-tabContent .project .swiper-slide .card .card-body .card-text {
-  color: black;
-  font-weight: 500;
-}
-#nav-tabContent .project .swiper-slide .card .card-body .card-btn {
-  margin: auto;
-  background: hsl(247, 93%, 59%) !important;
-  color: white;
 }
 
 @media only screen and (max-width: 992px) {
