@@ -15,14 +15,14 @@
   }
   body header {
     position: fixed;
-    width: 90vw;
+    width: 100%;
     bottom: 1rem;
     border-radius: 2rem;
     height: 4rem;
-    margin: 0rem 1rem;
+    margin: 0rem 0rem;
     z-index: 1001;
     padding: 1rem 0.1rem;
-    background: #3b54e2;
+    background: linear-gradient(180deg, rgb(37, 27, 203) 0%, rgb(95, 76, 251) 35%, rgb(173, 181, 255) 100%);
     box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1) !important;
   }
   body header #navbar #logo {
@@ -90,16 +90,18 @@
     width: 4rem !important;
   }
   .header-banner {
+    width: -webkit-fill-available !important;
     height: 60vh;
   }
   .header-banner .banner-image {
     display: none;
   }
   .header-banner #banner-title {
-    width: 100%;
+    width: -webkit-fill-available !important;
   }
   .header-banner #banner-title h1 {
     z-index: 1000;
+    width: -webkit-fill-available;
     font-size: 3rem;
   }
   .header-banner #banner-title h1 .typed-text {
@@ -112,18 +114,20 @@
   }
   .header-banner #banner-title .banner-title-sub-heading {
     font-size: 1.5rem;
+    width: -webkit-fill-available;
   }
   .header-banner #banner-title p {
-    font-size: 0.9rem;
-    font-weight: 500;
+    font-size: 1rem;
+    font-weight: 600;
+    width: -webkit-fill-available;
   }
   #about-section {
     box-shadow: none !important;
     background-color: white;
     height: 100vh;
-    top: -2rem;
+    top: 1rem;
     position: inherit;
-    display: none;
+    display: flex;
     margin-top: 0rem;
     padding-top: 2rem;
     align-items: center;
@@ -161,7 +165,7 @@
     display: inline;
   }
   #about-section #about-container .discribe-div p {
-    font-size: 12px;
+    font-size: 1rem;
     font-weight: 500;
     text-align: start;
   }
@@ -209,5 +213,9 @@
       bottom: 1rem;
       left: 1rem;
     }
+  }
+  #portfolio-section {
+    margin-top: 0rem !important;
+    height: 100vh !important;
   }
 }/*# sourceMappingURL=responsive.css.map */

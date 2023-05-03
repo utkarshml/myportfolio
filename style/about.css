@@ -1,20 +1,22 @@
 #about-section {
   animation: flip-effect 1s ease-in-out;
-  box-shadow: 0 1rem 3rem rgba(0, 0, 0, 0.175);
-  height: 80vh;
-  display: none;
-  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-  border-radius: 1rem;
-  z-index: 1000;
-  background: rgba(255, 255, 255, 0.25);
-  box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.37);
-  backdrop-filter: blur(4px);
-  -webkit-backdrop-filter: blur(4px);
-  border: 1px solid rgba(255, 255, 255, 0.18);
   margin-top: 5rem;
   align-items: center;
   justify-content: center;
   padding: 3rem 3rem;
+}
+#about-section #about-container h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: black;
+  text-transform: uppercase;
+  font-family: "Josefin Sans", sans-serif;
+  margin-bottom: 1rem;
+}
+#about-section #about-container h1 span {
+  color: hsl(247, 93%, 59%);
+  font-size: 2rem;
+  font-family: "Bruno Ace SC", cursive;
 }
 #about-section #about-container #aboutimg #img {
   background-position: -65px 2px;
@@ -40,8 +42,8 @@
   width: 5rem;
   height: 5rem;
   position: absolute;
-  border-bottom: 5px solid #3b558c;
-  border-right: 5px solid #3b558c;
+  border-bottom: 5px solid hsl(247, 93%, 59%);
+  border-right: 5px solid hsl(247, 93%, 59%);
   z-index: 1;
   bottom: 0;
   right: 0;
@@ -66,18 +68,19 @@
 #about-section #about-container .discribe-div h1 {
   font-size: 3rem;
   font-weight: 600;
-  color: #3b558c;
+  color: hsl(247, 93%, 59%);
   text-transform: uppercase;
 }
 #about-section #about-container .discribe-div p {
-  font-size: 1rem;
+  font-size: 1.2rem;
   font-weight: 600;
   text-align: start;
   animation: none;
 }
 #about-section #about-container .discribe-div .btn-style {
-  background-color: #3b558c !important;
+  background: linear-gradient(180deg, rgb(20, 34, 205) 26%, rgb(115, 123, 247) 100%) !important;
   color: whitesmoke !important;
   font-weight: 600;
   font-size: 1rem;
+  border: none;
 }/*# sourceMappingURL=about.css.map */

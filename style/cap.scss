@@ -1,275 +1,77 @@
-// Capability section css
-@keyframes progressAnimation {
-  0% {
-    width: 0%;
-  }
-  100% {
-    display: block;
-  }
-}
+$grad-red: linear-gradient(180deg, rgba(236,47,20,1) 26%, rgba(253,112,89,1) 100%);
+$grad-green: linear-gradient(0deg, rgba(150,245,141,1) 0%, rgba(41,136,13,1) 89%);
+$grad-black:linear-gradient(180deg, rgba(0,0,0,1) 14%, rgba(134,134,134,1) 100%);
+$grad-blue:linear-gradient(180deg, rgba(20,34,205,1) 26%, rgba(115,123,247,1) 100%);
+$grad-yellow:linear-gradient(0deg, rgba(251,135,135,1) 0%, rgba(253,190,45,1) 100%);
+$green:#4caf50;
+$red:#E91E63;
+$blue:hsl(247, 93%, 59%);
+$white :white;
+$black:black;
+$poppins:"poppins", sans-serif;
+$bruno:'Bruno Ace SC', cursive;
+$fasthand:'Fasthand', cursive;
+$josefin:'Josefin Sans', sans-serif;
+$cinzel:'Cinzel', serif;
+$quick:'Quicksand', sans-serif;
 
-#capability-section {
-  display: none;
-  margin-top: 4rem;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
 
-  .nav-tabs {
-    .nav-link {
-      font-family: "poppins", sans-serif !important;
-      color: hsl(247, 93%, 59%);
-      font-weight: 600;
 
-      &.active {
-        border-radius: 2rem !important;
-        background-color: hsl(247, 93%, 59%) !important;
-      }
-    }
-  }
-
-  #nav-tabContent {
-    margin-top: 4rem;
-    height: 100vh;
+// About Section
+#portfolio-section{
+    height: 80vh;
     width: 100%;
-
-    .tab-pane {
-      height: 100%;
-
-      span {
-        font-size: 1rem;
-        font-family: "Cinzel", sans-serif;
-        font-weight: 700;
-        color: black;
-        margin-top: 1rem;
+    margin-top: 4rem;
+    background-color: transparent;
+    border-radius: 2rem;
+    z-index: 1001;
+    display:flex;
+    flex-direction: column;
+    justify-content:center ;
+    align-items: center;
+    h1{
+      font-size: 2rem;
+      color: $black;
+      font-family: $josefin;
+      font-weight: 600;
+      padding-top: 1.7rem;
+      margin-bottom: 1rem;
+      margin-top: 1.5rem;
+      span{
+        color:$blue;
+        font-family: $bruno;
       }
-
-      .progress {
-        height: 1rem;
-        border-radius: 2rem;
-        padding-bottom: 1rem;
-        background-color: #d4d4d4;
-        overflow: visible !important;
-
-        .html {
-          background-color: #f44336 !important;
-          height: 1rem;
-          position: relative;
-          border-radius: 2rem;
-          animation: progressAnimation 1s ease-in-out;
-
-          width: 90%;
-          span {
-            float: right;
-            background-color: var(--purple);
-            color: #ffffff;
-            height: 40px;
-            width: 40px;
-            border-radius: 50%;
-            margin-right: -20px;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: -13px;
-            overflow: visible;
-          }
-        }
-      }
-      .progress {
-        height: 1rem;
-        border-radius: 2rem;
-        padding-bottom: 1rem;
-        background-color: #d4d4d4;
-
-        overflow: visible !important;
-        .css {
-          background-color: rgb(158, 7, 158) !important;
-          animation: progressAnimation 1s ease-in-out;
-          height: 1rem;
-          border-radius: 2rem;
-          width: 80%;
-          span {
-            float: right;
-            background-color: var(--purple);
-            color: #ffffff;
-            height: 40px;
-            width: 40px;
-            font-size: 15px;
-            border-radius: 50%;
-            margin-right: -20px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: -13px;
-            overflow: visible;
-          }
-        }
-      }
-
-      .progress {
-        margin: 1rem 0rem;
-      }
-      .progress {
-        height: 1rem;
-        border-radius: 2rem;
-        padding-bottom: 1rem;
-        background-color: #d4d4d4;
-        overflow: visible !important;
-        .javascript {
-          background-color: #ff9800 !important;
-          animation: progressAnimation 1s ease-in-out;
-          width: 75%;
-          height: 1rem;
-          border-radius: 2rem;
-          span {
-            float: right;
-            background-color: var(--purple);
-            color: #ffffff;
-            height: 40px;
-            font-size: 15px;
-            width: 40px;
-            border-radius: 50%;
-            margin-right: -20px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: -13px;
-            overflow: visible;
-          }
-        }
-      }
-      .progress {
-        height: 1rem;
-        border-radius: 2rem;
-        padding-bottom: 1rem;
-        background-color: #d4d4d4;
-        overflow: visible !important;
-
-        .python {
-          background-color: #4caf50 !important;
-          animation: progressAnimation 1s ease-in-out;
-          height: 1rem;
-          border-radius: 2rem;
-          width: 70%;
-          span {
-            float: right;
-
-            height: 40px;
-            font-size: 15px;
-            width: 40px;
-            border-radius: 50%;
-            margin-right: -20px;
-            background-color: var(--purple);
-            color: #ffffff;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: -13px;
-            overflow: visible;
-          }
-        }
-      }
-      .progress {
-        height: 1rem;
-        border-radius: 2rem;
-        padding-bottom: 1rem;
-        background-color: #d4d4d4;
-        overflow: visible !important;
-        .figma {
-          background-color: #e91e63 !important;
-          animation: progressAnimation 1s ease-in-out;
-          height: 1rem;
-          border-radius: 2rem;
-          width: 65%;
-
-          span {
-            float: right;
-            background-color: var(--purple);
-            color: #ffffff;
-            height: 40px;
-            font-size: 15px;
-            width: 40px;
-            border-radius: 50%;
-            margin-right: -20px;
-
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: -13px;
-            overflow: visible;
-          }
-        }
-      }
-      .progress {
-        height: 1rem;
-        border-radius: 2rem;
-        padding-bottom: 1rem;
-        background-color: #d4d4d4;
-        overflow: visible !important;
-        .mern {
-          background-color: hsl(247, 93%, 59%);
-          animation: progressAnimation 1s ease-in-out;
-          height: 1rem;
-          border-radius: 2rem;
-          width: 25%;
-
-          span {
-            float: right;
-
-            height: 40px;
-            width: 40px;
-            border-radius: 50%;
-            margin-right: -20px;
-            background-color: var(--purple);
-            color: #ffffff;
-            font-size: 15px;
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            margin-top: -13px;
-            overflow: visible;
-          }
-        }
+    }
+    .progress-container{
+      width: 70%;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      height: max-content;
+      h4{
+        font-family: "Cinzel", serif;
+        font-size: 1.2rem;
+        color:$black!important;
+        text-transform: uppercase;
+        font-weight: 600;
       }
     }
   }
-}
-
-.project {
-  height: 80vh;
-
-  h1 {
-    font-size: 2rem;
-    color: black;
-    font-weight: 600;
-  }
-
-  .swiper-slide {
-    margin: auto;
-    height: max-content;
-
-    .card {
-      .card-body {
-        .card-title {
-          color: hsl(247, 93%, 59%);
-          font-weight: 600;
+  .progress{
+    margin: 1rem 0rem!important;
+    .progress-bar{
+      background: linear-gradient(90deg,rgba(173,181,255,1) 0%, rgba(64,44,234,1) 35%, rgb(14, 6, 165) 100%)!important;
+      animation: progress-animation 2s ease-in-out;
+      border-radius: 2rem;
+      @keyframes progress-animation {
+        0%{
+          width: 0%;
+         
+  
         }
-
-        .card-text {
-          color: black;
-          font-weight: 500;
-        }
-
-        .card-btn {
-          margin: auto;
-          background: hsl(247, 93%, 59%) !important;
-          color: white;
+        100%{
+         opacity: 1;
         }
       }
     }
-  }
-}
+   }

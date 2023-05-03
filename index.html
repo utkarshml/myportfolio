@@ -7,7 +7,7 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <!-- Main CSS Link Sheet ----------------------->
-  <link rel="stylesheet" href="style.css" />
+  <link rel="stylesheet" href="/style/style.css" />
   <!-- JS Swiper CDN Link Sheet ------------------------>
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.css" />
   <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
@@ -25,31 +25,31 @@
 
 <body>
   <!-- Header section  ------------------>
-  <div  class="bubble0"></div>
+  <!-- <div  class="bubble0"></div>
   <div  class="bubble1"></div>
   <div  class="bubble2"></div>
-  <div  class="bubble3"></div>
+  <div  class="bubble3"></div> -->
   
-  <header id="home-section">
+  <header>
      <div id="navbar">
-      <a href="#" id="logo">
+      <a href="#banner-section" id="logo">
         Utkarsh<span>.</span>
       </a>
       <div id="menu-bar">
-        <div class="menu-links" data-output="Home">
-          <a id="home" href="#home-section" class="nav-link">Home</a>
+        <div class="menu-links">
+          <a id="home" href="#banner-section" class="nav-link">Home</a>
           <i id="home-icon" class="uil uil-estate "></i>
         </div>
 
-        <div class="menu-links" data-output="About">
+        <div class="menu-links">
           <a id="about" href="#about-section" class="nav-link">About</a><i id="about-icon" class="uil uil-user"></i>
         </div>
-        <div class="menu-links" data-output="capability">
-          <a id="capability" href="#capability-section" class="nav-link">Capability</a><i id="capability-icon"
+        <div class="menu-links">
+          <a id="portfolio" href="#portfolio-section" class="nav-link">Portfolio</a><i id="capability-icon"
             class="uil uil-book-open"></i>
         </div>
         <div class="menu-links">
-          <a id="project" href="#project-section" class="nav-link">Projects</a><i id="project-icon"
+          <a id="project" href="#project-section" class="nav-link">canvas</a><i id="project-icon"
             class="uil uil-bag-alt"><a href="#" style="text-decoration: none;">&nbsp;</a></i>
         </div>
         <div class="menu-links">
@@ -73,7 +73,7 @@
       </div>
   </header>
   <!-- Header Heading Sub-Section ---------------->
-  <section id="banner-section" data-effect="Home" class="header-banner container">
+  <section id="banner-section" class="header-banner container">
     <div id="banner-title">
       <span class="banner-special">Hello</span>
       <h1>I 'm<span class="typed-text"></span><span class="cursor">&nbsp;</span>
@@ -100,11 +100,12 @@
     </div>
   </section>
     <!-- About section starting Code  -->⁡⁡
-    <section id="about-section" data-effect="About" class="about text-center container">
+    <section id="about-section"  class="about text-center container">
       <div id="about-container" class="row">
+        <h1>About <span>Me</span> 
+        </h1>
         <div id="aboutimg" class="col-6 about-img-div col-md-4">
           <div id="img">
-  
           </div>
         </div>
         <div class="col-md-8 discribe-div">
@@ -118,259 +119,40 @@
       </div>
     </section>
   
-  ⁡⁢⁣⁣ <!-- Capability section starting code  -->⁡
-  <section id="capability-section" class="container" data-effect="capability">
-    <nav>
-      <div class="nav shadow rounded-pill card-btn nav-tabs" id="nav-tab" role="tablist">
-        <button class="nav-link   active" id="nav-home-tab" data-bs-toggle="tab" data-bs-target="#nav-home"
-          type="button" role="tab" aria-controls="nav-home" aria-selected="true">SKILLS <i class="uil uil-chart-bar-alt"></i></button>
-        <button class="nav-link" id="nav-profile-tab" data-bs-toggle="tab" data-bs-target="#nav-profile" type="button"
-          role="tab" aria-controls="nav-profile" aria-selected="false">PROJECTS <i class="uil uil-credit-card-search"></i></button>
-      </div>
-    </nav>
-    <div class="tab-content mt-4 container" id="nav-tabContent">
-      <div class="tab-pane fade show active html container" id="nav-home" role="tabpanel" aria-labelledby="nav-home-tab">
-        <!-- <div class="progress shadow-lg container">
-          <span id="progress-bar-label">Html</span>
-          <div class="progress-bar rounded-pill card-btn shadow html" role=" progressbar" style="width: 90%;" aria-valuenow="25"
-            aria-valuemin="0" aria-valuemax="100"><span>90%</span></div>
-          <span id="progress-bar-label">css</span>
-          <div class="progress-bar rounded-pill card-btn shadow css " role=" progressbar" style="width: 80%;" aria-valuenow="25"
-            aria-valuemin="0" aria-valuemax="100"><span>80%</span></div>
-          <span id="progress-bar-label">javascript</span>
-          <div class="progress-bar rounded-pill card-btn  shadow javascript" role="progressbar" style="width: 75%;" aria-valuenow="25"
-            aria-valuemin="0" aria-valuemax="100"><span>75%</span></div>
-          <span id="progress-bar-label">python</span>
-          <div class="progress-bar rounded-pill card-btn shadow python" role="progressbar" style="width: 70%;" aria-valuenow="25"
-            aria-valuemin="0" aria-valuemax="100"><span>70%</span></div>
-          <span id="progress-bar-label">figma</span>
-          <div class="progress-bar rounded-pill card-btn shadow figma "role=" progressbar" style="width: 50%;" aria-valuenow="25"
-            aria-valuemin="0" aria-valuemax="100"><span>50%</span></div>
-          <span id="progress-bar-label">MERN</span>
-          <div class="progress-bar rounded-pill card-btn shadow mern" role=" progressbar" style="width: 15%;" aria-valuenow="25"
-            aria-valuemin="0" aria-valuemax="100"><span>15%</span></div>
-        </div> -->
-        <span id="progress-bar-label">Html</span>
+  ⁡⁢⁣⁣ <!-- Capability section starting code  -->
+  <section id="portfolio-section" class="container" data-effect="Portfolio">
+    <h1>My <span>Skills</span> </h1> 
+    <div class="progress-container">
+    <!-- my skills are html , css , javascript , python , bootstrap ,figma ,   -->
+      <h4>HTML</h4>
       <div class="progress">
-        <div class="html"><span>90%</span></div>
+        <div class="progress-bar" style="width: 90%;">90%</div>
       </div>
-      <span id="progress-bar-label">Css</span>
+      <h4>Css</h4>
       <div class="progress">
-        <div class="css"><span>80%</span></div>
+        <div class="progress-bar" style="width: 90%;"><span>90%</span> </div>
       </div>
-      <span id="progress-bar-label">javascript</span>
+      <h4>JavaScript</h4>
       <div class="progress">
-        <div class="javascript"><span>75%</span></div>
+        <div class="progress-bar" style="width: 80%;"><span> 80%</span></div> 
       </div>
-      <span id="progress-bar-label">python</span>
-      <div class="progress">
-        <div class="python"><span>70%</span></div>
-      </div>
-      <span id="progress-bar-label">figma</span>
-      <div class="progress">
-        <div class="figma"><span>65%</span></div>
-      </div>
-      <span id="progress-bar-label">MERN</span>
-      <div class="progress">
-        <div class="mern"><span>20%</span></div>
-      </div>
-      </div>
-      <div class="tab-pane fade" id="nav-profile" role="tabpanel" aria-labelledby="nav-profile-tab">
-        <div class="project my-3 ">
-          <div class="beginner">
-            <h1 class="my-3"> Beginner Project</h1>
-            <div class="swiper mySwiper">
-              <div class="swiper-wrapper">
-                <div class="swiper-slide">
-                  <div class="card">
-                    <img class="card-img-top" src="img/pr.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                      <a href="#" class="btn rounded-pill card-btn">Go somewhere</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card shadow">
-                    <img class="card-img-top" src="img/pr.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                      <a href="#" class="btn  rounded-pill card-btn">Go somewhere</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card" >
-                    <img class="card-img-top" src="img/pr.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                      <a href="#" class="btn card-btn rounded-pill card-btn">Go somewhere</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card">
-                    <img class="card-img-top" src="img/pr.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                      <a href="#" class="btn card-btn rounded-pill card-btn">Go somewhere</a>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-slide">
-                  <div class="card">
-                    <img class="card-img-top" src="img/pr.jpg" alt="Card image cap">
-                    <div class="card-body">
-                      <h5 class="card-title">Card title</h5>
-                      <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                        the card's content.</p>
-                      <a href="#" class="btn rounded-pill card-btn ">Go somewhere</a>
-                    </div>
-                  </div>
-                </div>  
-          </div> </div>
-              <div class="swiper-pagination"></div>
-            </div>
-          <div class="project my-3 ">
-            <div class="intermediate">
-              <h1 class="my-3">Intermediate Project</h1>
-              <div class="swiper mySwiper">
-                <div class="swiper-wrapper">
-                  <div class="swiper-slide">
-                    <div class="card">
-                      <img class="card-img-top" src="img/pr.jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                          the card's content.</p>
-                        <a href="#" class="btn rounded-pill card-btn">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card shadow">
-                      <img class="card-img-top" src="img/pr.jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                          the card's content.</p>
-                        <a href="#" class="btn rounded-pill card-btn">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card" >
-                      <img class="card-img-top" src="img/pr.jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                          the card's content.</p>
-                        <a href="#" class="btn rounded-pill card-btn">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card">
-                      <img class="card-img-top" src="img/pr.jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                          the card's content.</p>
-                        <a href="#" class="btn rounded-pill card-btn">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-slide">
-                    <div class="card">
-                      <img class="card-img-top" src="img/pr.jpg" alt="Card image cap">
-                      <div class="card-body">
-                        <h5 class="card-title">Card title</h5>
-                        <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                          the card's content.</p>
-                        <a href="#" class="btn rounded-pill card-btn">Go somewhere</a>
-                      </div>
-                    </div>
-                  </div>
-                </div>
-                <div class="swiper-pagination"></div>
-              </div>
-            </div>
-            <div class="project ">
-              <div class="advance">
-                <h1 class="my-3">Advance Project</h1>
-                <div class="swiper mySwiper">
-                  <div class="swiper-wrapper">
-                    <div class="swiper-slide">
-                      <div class="card">
-                        <img class="card-img-top" src="img/pr.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                          <a href="#" class="btn rounded-pill card-btn">Go somewhere</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="card shadow">
-                        <img class="card-img-top" src="img/pr.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                          <a href="#" class="btn rounded-pill card-btn">Go somewhere</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="card" >
-                        <img class="card-img-top" src="img/pr.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                          <a href="#" class="btn rounded-pill card-btn">Go somewhere</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="card">
-                        <img class="card-img-top" src="img/pr.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                          <a href="#" class="btn rounded-pill card-btn">Go somewhere</a>
-                        </div>
-                      </div>
-                    </div>
-                    <div class="swiper-slide">
-                      <div class="card">
-                        <img class="card-img-top" src="img/pr.jpg" alt="Card image cap">
-                        <div class="card-body">
-                          <h5 class="card-title">Card title</h5>
-                          <p class="card-text">Some quick example text to build on the card title and make up the bulk of
-                            the card's content.</p>
-                          <a href="#" class="btn rounded-pill card-btn">Go somewhere</a>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <div class="swiper-pagination"></div>
-                </div>
-              </div>
+        <h4>Python</h4>
+        <div class="progress">
+          <div class="progress-bar" style="width: 70%;"><span> 70%</span></div>
         </div>
-
-      </div>
+        <h4>Bootstrap</h4>
+        <div class="progress">
+          <div class="progress-bar" style="width: 80%;"><span>80%</span> </div>
+        </div>
+        <h4>Figma</h4>
+        <div class="progress">
+          <div class="progress-bar" style="width: 80%;"><span>80%</span> </div>
+        </div>
+        </div>  
+   
+  
   </section>
+
 
 </body>
 <script src="style.js"></script>

@@ -1,36 +1,63 @@
 @import url("https://fonts.googleapis.com/css2?family=Cinzel:wght@400;500;600;700;800;900&display=swap");
-@import "../MyPortfolio/style/cap.scss";
-@import "../MyPortfolio/style/about.scss";
+@import "cap.scss";
+@import url('https://fonts.googleapis.com/css2?family=Bruno+Ace+SC&family=Fasthand&family=Josefin+Sans:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;1,100;1,200;1,300;1,400;1,500;1,600;1,700&family=Quicksand:wght@300;400;500;600;700&display=swap');
+@import "about.scss";
+@import "responsive.scss";
+ 
+$grad-red: linear-gradient(180deg, rgba(236,47,20,1) 26%, rgba(253,112,89,1) 100%);
+$grad-green: linear-gradient(0deg, rgba(150,245,141,1) 0%, rgba(41,136,13,1) 89%);
+$grad-black:linear-gradient(180deg, rgba(0,0,0,1) 14%, rgba(134,134,134,1) 100%);
+$grad-blue:linear-gradient(180deg, rgba(20,34,205,1) 26%, rgba(115,123,247,1) 100%);
+$grad-yellow:linear-gradient(0deg, rgba(251,135,135,1) 0%, rgba(253,190,45,1) 100%);
+$green:#4caf50;
+$red:#E91E63;
+$blue:hsl(247, 93%, 59%);
+$white :white;
+$black:black;
+$poppins:"poppins", sans-serif;
+$bruno:'Bruno Ace SC', cursive;
+$fasthand:'Fasthand', cursive;
+$josefin:'Josefin Sans', sans-serif;
+$cinzel:'Cinzel', serif;
+$quick:'Quicksand', sans-serif;
+
 
 * {
   margin: 0;
   padding: 0%;
   box-sizing: border-box;
-  font-family: "poppins", sans-serif;
+  scroll-behavior: smoothg;
 }
 // Animation frame 
 @keyframes slide-left {
   0%{
     position: absolute;
-    left: -100%;
-    opacity: 0;
+    left: -1000%;
+ 
   }
   50%{
+    position: relative;
     left: 0;
-    opacity: .5;
+
   }
   100%{
-   left: 0;
-   opacity: 1;
+    position: relative;
+    left: 0;
+ 
   }
 }
 @keyframes slide-right {
   0%{
     position: absolute;
-    right: -100%;
+    right: -1000%;
+  }
+  50%{
+    position: relative;
+    right: 0;
   }
   100%{
     right: 0;
+ 
   }
 }
 @keyframes flip-effect {
@@ -46,16 +73,14 @@
 html,
 body {
   position: relative;
-
   width: 100%;
-  
   height: max-content;
-  background-color: white;
+  background-color: $white;
 }
 header {
   display: block;
   position: fixed;
-  z-index: 1000;
+  z-index: 999999;
   width: 100%;
   height: 5rem;
   #navbar {
@@ -68,37 +93,42 @@ header {
       text-decoration: none;
       width: 20%;
       font-size: 2rem;
-      font-weight: 600;
-      font-family: "poppins" sans-serif;
-      color: hsl(247, 93%, 59%);
+      font-weight: 700;
+      font-family: $josefin;
+       color:$blue;
 
       span {
-        color: black !important;
+        color:$black!important;
         font-size: 2rem;
         font-weight: 600;
       }
+    }
+    .scroll-effect{
+      box-shadow: 0px 0px 0px 5px rgba(0,0,0,1);
+      background-color: #4caf50!important;
     }
 
     #menu-bar {
       display: flex;
       align-items: center;
       justify-content: center;
-      position: relative;
       width: 60%;
       border-radius: 2rem;
       height: 2.7rem;
-      background-color: white;
+      background-color:$white;
 
       .menu-links {
         width: calc(100% / 4);
         text-align: center;
-        font-size: 1rem;
-        font-weight: 700;
-        color: hsl(247, 93%, 59%);
+        font-size: 14px;
+        font-weight: 600;
+        color: $blue;
         z-index: 2;
 
         .nav-link {
           height: 100%;
+          font-family: $bruno;
+          letter-spacing: 2px;
         }
 
         i {
@@ -110,7 +140,7 @@ header {
         position: absolute;
         left: 0;
         height: 100%;
-        background-color: hsl(247, 93%, 59%);
+        background:$grad-blue;
         border-radius: 2rem;
         z-index: 1;
         transition: 0.6s ease-in;
@@ -131,17 +161,17 @@ header {
         text-align: start !important;
         text-decoration: none;
         font-size: 1rem;
-        color: hsl(247, 93%, 59%);
+        color: $blue;
         font-weight: 600;
       }
 
       .btn-style {
-        background-color: hsl(247, 93%, 59%) !important;
-        color: white !important;
+        background:$grad-blue;
+        color: $white;
         font-weight: 600;
         font-size: 1rem;
         &:hover {
-          background-color: white !important;
+          background:$white;
           border: 1px solid hsl(247, 93%, 59%) !important;
           color: hsl(247, 93%, 59%) !important;
         }
@@ -260,20 +290,19 @@ animation: zig 4s infinite;
 // header Banner css
 .header-banner {
   transition: 0.4s;
-  height: 100vh;
+  padding-top: 1rem;
+  height: 90vh;
   width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-around;
   .banner-image{
-    animation: slide-right 1s ease-in-out;
+    animation: slide-right 2s ease-in-out;
     position: relative;
     width: calc(100%/3);
     .img{
       animation: fly 4s infinite;
     }
-    
-
     height: 22rem;
 
     @keyframes fly {
@@ -290,7 +319,7 @@ animation: zig 4s infinite;
     .triangle-1{
   height: 60px;
    position: absolute;
-   background-color: #FF9800;
+   background:$grad-yellow;
    width: 60px;
    aspect-ratio: 1;
    right: 0rem;
@@ -303,7 +332,7 @@ animation: zig 4s infinite;
       height: 450px;
       width: 450px;
   aspect-ratio: 1;
-  background-color: #4caf50;
+  background: $grad-green;
   clip-path: polygon(100.00% 50.00%,25.00% 93.30%,25.00% 6.70%);
       transform: rotate(90deg);
        .img-frame{
@@ -325,7 +354,7 @@ animation: zig 4s infinite;
   position: absolute;
    width: 450px;
   aspect-ratio: 1;
-  background-color: hsl(247, 93%, 59%);
+  background:$grad-blue;
   z-index: 1;
   clip-path: polygon(100.00% 50.00%,25.00% 93.30%,25.00% 6.70%,100.00% 50.00%,calc(25.00% - -2.00px) calc(6.70% - -3.46px),calc(25.00% - -2.00px) calc(93.30% - 3.46px),calc(100.00% - 4.00px) calc(50.00% - 0.00px),calc(25.00% - -2.00px) calc(6.70% - -3.46px));
     }
@@ -334,7 +363,7 @@ animation: zig 4s infinite;
       width: 450px;
       height: 450px;
   aspect-ratio: 2;
-  background-color: #f44336;
+  background:$grad-red;
   clip-path: polygon(100.00% 50.00%,25.00% 93.30%,25.00% 6.70%);
    transform: rotate(45deg);
     }
@@ -343,28 +372,26 @@ animation: zig 4s infinite;
     display: flex;
     width: calc(100%/2);
     flex-direction: column;
+    animation: slide-left 2s ease-in-out;
 
     }
     .banner-special{
       color: white;
       font-size: 1rem;
       font-weight: 600;
-      background-color: #FF9800;
+      background: linear-gradient(0deg, rgba(251,135,135,1) 0%, rgba(253,190,45,1) 100%);
       display: inline;
       width: fit-content;
       padding: .2rem .5rem;
       border-radius: .2rem;
-      animation: slide-left 1s ease-in-out;
     }
     h1 {
       font-size: 4rem;
       font-weight: 700;
-      animation: slide-left 1s ease-in-out;
     }
     .typed-text {
       color: hsl(247, 93%, 59%);
       margin-left: 2rem;
-      animation: slide-left 1s ease-in-out;
     }
     .cursor {
       width: 0.5rem;
@@ -374,7 +401,6 @@ animation: zig 4s infinite;
       animation: blink 0.4s;
       border-radius: 5px;
       background-color: black;
-      animation: slide-left 1s ease-in-out;
       @keyframes blink {
         0% {
           opacity: 1;
@@ -398,25 +424,6 @@ animation: zig 4s infinite;
       color: hsl(247, 93%, 59%);
       font-weight: 600;
       font-family: "Cinzel", serif;
-      animation: slide-left 1s ease-in-out;
-    .line{
-    background: #4a60c3;
-    height: 2px;
-    width: 10rem;
-    margin-left: .2rem;
-    display: block;
-    animation: slide-left 1s ease-in;
-    @keyframes slide-left {
-      0%{
-        position: absolute;
-        left: -100%;
-      }
-      100%{
-        position: relative;
-        left: 0;
-      }
-    }
-     }
       }
     }
     p {
@@ -424,34 +431,36 @@ animation: zig 4s infinite;
       font-weight: 600;
       margin-top: 0.5rem;
       text-transform: capitalize;
+      font-family: $quick;
+      letter-spacing: 1px;
       animation: slide-left 1s ease-in-out;
     }
     .social-media{
      display: flex;
+     width: -webkit-fill-available;
      animation: slide-left 1s ease-in-out;
       .social-link{
-        position: relative;
         display: flex;
         align-items: center;
         justify-content: center;
         margin: 1rem;
         height: 3rem;
         width: 3rem;
-        background-color: rgba(181, 187, 211, 0.671);
         border-radius: 50%;
        i{
         font-size: 1.5rem;
         color: hsl(247, 93%, 59%);
+        padding-bottom: .3rem;
         font-weight: 600;
        }
        &:hover{
-        background-color: hsl(247, 93%, 59%);
+        background-color: $grad-blue;
         i{
           color: white;
         }
        }
        &:nth-child(4){
-        background-color: rgb(14, 11, 11);
+        background: linear-gradient(180deg, rgba(0,0,0,1) 14%, rgba(134,134,134,1) 100%);
       i{
             color: white;
           }
@@ -463,13 +472,13 @@ animation: zig 4s infinite;
         }
       }
       &:nth-child(3){
-        background-color:#474bff;
+        background:$grad-blue;
         i{
           color: white;
         }
         &:hover{
           
-          background-color: rgba(181, 187, 211, 0.671);
+          background: rgba(181, 187, 211, 0.671);
           i{
             color:#474bff;
           }
@@ -477,13 +486,13 @@ animation: zig 4s infinite;
         }
       }
       &:nth-child(2){
-         background-color:#4caf50;
+        background: linear-gradient(0deg, rgba(150,245,141,1) 0%, rgba(41,136,13,1) 89%);
         i{
           color: white;
         }
         &:hover{
          
-          background-color: rgba(181, 187, 211, 0.671);
+          background: rgba(181, 187, 211, 0.671);
           i{
             color: #4caf50;
           }
@@ -491,13 +500,13 @@ animation: zig 4s infinite;
         }
       }
       &:nth-child(1){
-         background-color:#E91E63;
+        background: linear-gradient(7deg, rgba(247,128,128,1) 0%, rgba(205,19,82,1) 100%);
         i{
           color: white;
         }
         &:hover{
          
-          background-color: rgba(181, 187, 211, 0.671);
+          background: rgba(181, 187, 211, 0.671);
           i{
             color: #E91E63;
           }
@@ -507,4 +516,4 @@ animation: zig 4s infinite;
       }
       
     }
-@import "../MyPortfolio/style/responsive.scss";
+ 

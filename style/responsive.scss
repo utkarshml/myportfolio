@@ -21,17 +21,16 @@
 
     header {
       position: fixed;
-      width: 90vw;
+      width: 100%;
       bottom: 1rem;
       border-radius: 2rem;
       height: 4rem;
-      margin: 0rem 1rem;
+      margin: 0rem 0rem;
       z-index: 1001;
-
       padding: 1rem 0.1rem;
 
       // border-radius: 2rem 2rem 0 0;
-      background: #3b54e2;
+      background: linear-gradient(180deg, rgba(37,27,203,1) 0%, rgba(95,76,251,1) 35%, rgba(173,181,255,1) 100%);
       box-shadow: 0px 0px 5px 5px rgba(0, 0, 0, 0.1) !important;
 
       #navbar {
@@ -105,14 +104,16 @@
   }
 
   .header-banner {
+    width: -webkit-fill-available!important;
     height: 60vh;
     .banner-image {
       display: none;
     }
     #banner-title {
-      width: 100%;
+      width:-webkit-fill-available!important;
       h1 {
         z-index: 1000;
+        width: -webkit-fill-available;
         font-size: 3rem;
         .typed-text {
           margin-left: 0.5rem;
@@ -125,10 +126,12 @@
       }
       .banner-title-sub-heading {
         font-size: 1.5rem;
+        width: -webkit-fill-available;
       }
       p {
-        font-size: 0.9rem;
-        font-weight: 500;
+        font-size: 1rem;
+        font-weight: 600;
+        width: -webkit-fill-available;
       }
     }
   }
@@ -138,9 +141,9 @@
     box-shadow: none!important;
     background-color: white;
     height:100vh;
-    top: -2rem;
+    top: 1rem;
     position: inherit;
-    display: none;
+    display: flex;
     margin-top: 0rem;
     padding-top: 2rem;
     align-items: center;
@@ -178,7 +181,7 @@
       
         }
         p {
-          font-size: 12px;
+          font-size: 1rem;
           font-weight: 500;
           text-align: start;
         }
@@ -232,5 +235,9 @@
         left: 1rem;
       }
     }
+  }
+  #portfolio-section{
+    margin-top: 0rem!important;
+    height: 100vh!important;
   }
 }

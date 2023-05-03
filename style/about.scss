@@ -1,22 +1,40 @@
 // About section of this website in home page
+$grad-red: linear-gradient(180deg, rgba(236,47,20,1) 26%, rgba(253,112,89,1) 100%);
+$grad-green: linear-gradient(0deg, rgba(150,245,141,1) 0%, rgba(41,136,13,1) 89%);
+$grad-black:linear-gradient(180deg, rgba(0,0,0,1) 14%, rgba(134,134,134,1) 100%);
+$grad-blue:linear-gradient(180deg, rgba(20,34,205,1) 26%, rgba(115,123,247,1) 100%);
+$grad-yellow:linear-gradient(0deg, rgba(251,135,135,1) 0%, rgba(253,190,45,1) 100%);
+$green:#4caf50;
+$red:#E91E63;
+$blue:hsl(247, 93%, 59%);
+$white :white;
+$black:black;
+$poppins:"poppins", sans-serif;
+$bruno:'Bruno Ace SC', cursive;
+$fasthand:'Fasthand', cursive;
+$josefin:'Josefin Sans', sans-serif;
+$cinzel:'Cinzel', serif;
+$quick:'Quicksand', sans-serif;
 #about-section {
     animation: flip-effect 1s ease-in-out;
-    box-shadow: 0 1rem 3rem rgba(0,0,0,.175);
-    height: 80vh;
-    display: none;
-    box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.1);
-    border-radius: 1rem;
-    z-index: 1000;
-    background: rgba( 255, 255, 255, 0.25 );
-    box-shadow: 0 8px 32px 0 rgba( 31, 38, 135, 0.37 );
-    backdrop-filter: blur( 4px );
-    -webkit-backdrop-filter: blur( 4px );
-    border: 1px solid rgba( 255, 255, 255, 0.18 );
     margin-top: 5rem;
     align-items: center;
     justify-content: center;
     padding:  3rem 3rem;
     #about-container {
+      h1{
+        font-size: 2rem;
+        font-weight: 600;
+        color: $black;
+        text-transform: uppercase;
+        font-family: $josefin;
+        margin-bottom: 1rem;
+        span{
+          color:$blue;
+          font-size: 2rem;
+          font-family: $bruno;
+        }
+      }
       #aboutimg {
         #img {
 
@@ -43,8 +61,8 @@
             width: 5rem;
             height: 5rem;
             position: absolute;
-            border-bottom: 5px solid #3b558c;
-            border-right: 5px solid #3b558c;
+            border-bottom: 5px solid $blue;
+            border-right: 5px solid $blue;
             z-index: 1;
             bottom: 0;
             right: 0;
@@ -69,22 +87,23 @@
         h1 {
           font-size: 3rem;
           font-weight: 600;
-          color: #3b558c;
+          color:$blue;
           text-transform: uppercase;
         }
         p {
-          font-size: 1rem;
+          font-size: 1.2rem;
           font-weight: 600;
           text-align: start;
           animation: none;
         }
         .btn-style {
-          background-color:#3b558c !important;
+          background:$grad-blue!important;
           color: whitesmoke !important;
           font-weight: 600;
           font-size: 1rem;
+          border: none;
         }
       }
     }
   }
- 
+

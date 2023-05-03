@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Canvas</title>
+  </head>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+    body {
+      height: 100%;
+      width: 100%;
+      position: relative;
+    }
+    #canvas {
+      height: 50vh;
+      position: absolute;
+      transform: translate(50%, 50%);
+      width: 50%;
+      border: 2px solid black;
+    }
+  </style>
+  <body>
+    <canvas id="canvas"> </canvas>
+  </body>
+  <script >
+    window.addEventListener("load", () => {
+      
+    
+    // multi color pixel effect on banner section when mouse hover
+    const canvas = document.getElementById("canvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = canvas.offsetWidth;
+    canvas.height = canvas.offsetHeight;
+    const image = new Image();
+    const fectchPath = "./img.txt";
+    fetch(fectchPath)
+      .then((response) => response.text())
+      .then((data) => {
+        image.src = data;
+      })
+      .catch((error) => {
+        console.log(error);
+      });
+    canvas.append(image);
+    image.style.margin = "auto";
+    image.style.zIndex = "1000";
+    class Particle {
+      constructor() {
+        this.x = Math.random() * canvas.width;
+        this.y = Math.random() * canvas.height;
+        this.size = 10;
+        this.vx = Math.random() * 1 ;
+        this.vy = Math.random() * 1 ;
+      }
+      draw(context) {
+        context.fillRect(this.x, this.y, this.size, this.size);
+      }
+      update() {
+        this.x += this.vx;
+        this.y += this.vy;
+      }
+    }
+    class Effect {
+      constructor(height, width) {
+        this.height = height;
+        this.width = width;
+        this.pixleArray = [];
+        this.image = image;
+        this.centerX = this.width * 0;
+        this.centerY = this.height * 0;
+      }
+      init() {
+        for (let i = 0; i < 100; i++) {
+          this.pixleArray.push(new Particle());
+        }
+      }
+      draw(context) {
+        this.pixleArray.forEach((particle) => {
+          particle.draw(context);
+        });
+          context.drawImage(
+            this.image,
+            this.centerX,
+            this.centerY,
+            this.image.width,
+            this.image.height
+          );
+
+      }
+      update() {
+        this.pixleArray.forEach((particle) => {
+          particle.update();
+        });
+      }
+    }
+    const effect = new Effect(canvas.height, canvas.width);
+    effect.init();
+    
+    function animate() {
+      ctx.clearRect(0, 0, canvas.width, canvas.height);  
+      effect.update();
+      effect.draw(ctx);
+      requestAnimationFrame(animate);
+    }
+    animate();
+  });
+  </script>
+</html>
